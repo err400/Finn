@@ -17,7 +17,7 @@ services:
       - key: FINN_STORAGE_BACKEND
         value: supabase
       - key: FINN_STORAGE_URL
-        sync: false
+        value: https://yeqkhpnjlfpjvnsygpbo.supabase.co
       - key: FINN_STORAGE_KEY
         sync: false
       - key: FINN_STORAGE_BUCKET
