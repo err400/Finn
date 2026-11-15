@@ -15,7 +15,7 @@
 
 ## Publishing and deployment
 
-- [ ] Push vetted source to https://github.com/err400/Finn and confirm public visibility.
+- [x] Push vetted source to https://github.com/err400/Finn and confirm public visibility (verified 16 November 2026).
 - [ ] Create Supabase **Free** project and **private** `finn-private` bucket.
 - [ ] Privately import local data before first hosted startup, or run reviewed real-source bootstrap.
 - [ ] Render **Free** backend, one worker, Postgres + private Storage secrets only on backend.
