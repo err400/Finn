@@ -25,7 +25,7 @@ services:
       - key: FINN_REVIEWER_TOKEN
         sync: false
       - key: FINN_CORS_ORIGINS
-        sync: false
+        value: '["https://finn-three-brown.vercel.app"]'
       - key: FINN_EPHEMERAL_STORAGE
         value: false
       - key: FINN_BOOTSTRAP_ENABLED
