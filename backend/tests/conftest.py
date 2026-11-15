@@ -31,4 +31,3 @@ def client():
         c.close()
         app.dependency_overrides.clear()
         engine.dispose()
-
