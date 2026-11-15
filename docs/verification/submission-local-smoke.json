@@ -1,0 +1,106 @@
+{
+  "frontend": "http://127.0.0.1:5173",
+  "backend": "http://127.0.0.1:8001",
+  "hosted": false,
+  "frontend_served": true,
+  "access_mode": "local",
+  "storage_ephemeral": false,
+  "portfolio": {
+    "companies": 18,
+    "sectors": 15,
+    "price_coverage": 18,
+    "primary_source_coverage": 3,
+    "latest_trade_date": "2026-11-13",
+    "oldest_trade_date": "2026-11-13"
+  },
+  "cors_verified": true,
+  "announcements": 22,
+  "archive_coverage": {
+    "stored_filings": 22,
+    "earliest_publication_date": "2025-04-01",
+    "latest_publication_date": "2026-11-13",
+    "exhaustive": false,
+    "companies_with_filings": 2,
+    "portfolio_companies": 18,
+    "by_company": [
+      {
+        "ticker": "BHARTIARTL",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "CERA",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "DEEPAKNTR",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "HDFCBANK",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "HINDUNILVR",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "ICICIBANK",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "INFY",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "ITC",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "KPRMILL",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "LT",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "MARUTI",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "PIDILITIND",
+        "stored_filings": 4
+      },
+      {
+        "ticker": "RELIANCE",
+        "stored_filings": 18
+      },
+      {
+        "ticker": "SUNPHARMA",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "TATASTEEL",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "TCS",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "TITAN",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "ULTRACEMCO",
+        "stored_filings": 0
+      }
+    ]
+  },
+  "event_to_person_verified": true,
+  "research": {
+    "status": "completed",
+    "passages": 10,
+    "verified_claims": 6
+  }
+}

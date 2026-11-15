@@ -1,0 +1,704 @@
+[
+  {
+    "id": 22,
+    "ticker": "BHARTIARTL",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:05.343220+00:00",
+    "completed_at": "2026-11-15 19:52:05.994245+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "network",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "network",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 23,
+    "ticker": "CERA",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:05.995837+00:00",
+    "completed_at": "2026-11-15 19:52:05.998634+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 24,
+    "ticker": "DEEPAKNTR",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:05.999760+00:00",
+    "completed_at": "2026-11-15 19:52:06.001699+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 25,
+    "ticker": "HDFCBANK",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.002880+00:00",
+    "completed_at": "2026-11-15 19:52:06.005138+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 26,
+    "ticker": "HINDUNILVR",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.006392+00:00",
+    "completed_at": "2026-11-15 19:52:06.008272+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 27,
+    "ticker": "ICICIBANK",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.009372+00:00",
+    "completed_at": "2026-11-15 19:52:06.011185+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 28,
+    "ticker": "INFY",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.012219+00:00",
+    "completed_at": "2026-11-15 19:52:06.013960+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 29,
+    "ticker": "ITC",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.015123+00:00",
+    "completed_at": "2026-11-15 19:52:06.016936+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 30,
+    "ticker": "KPRMILL",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.017953+00:00",
+    "completed_at": "2026-11-15 19:52:06.019634+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 31,
+    "ticker": "LT",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.020651+00:00",
+    "completed_at": "2026-11-15 19:52:06.023097+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 32,
+    "ticker": "MARUTI",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.024413+00:00",
+    "completed_at": "2026-11-15 19:52:06.026699+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 33,
+    "ticker": "PIDILITIND",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.028011+00:00",
+    "completed_at": "2026-11-15 19:52:06.029866+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 34,
+    "ticker": "RELIANCE",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.031016+00:00",
+    "completed_at": "2026-11-15 19:52:06.032907+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 35,
+    "ticker": "SUNPHARMA",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.033883+00:00",
+    "completed_at": "2026-11-15 19:52:06.035718+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 36,
+    "ticker": "TATASTEEL",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.036701+00:00",
+    "completed_at": "2026-11-15 19:52:06.038311+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 37,
+    "ticker": "TCS",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.039260+00:00",
+    "completed_at": "2026-11-15 19:52:06.040879+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 38,
+    "ticker": "TITAN",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.041981+00:00",
+    "completed_at": "2026-11-15 19:52:06.043833+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  },
+  {
+    "id": 39,
+    "ticker": "ULTRACEMCO",
+    "dataset": "filings",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:52:06.045338+00:00",
+    "completed_at": "2026-11-15 19:52:06.047176+00:00",
+    "details": {
+      "mode": "live",
+      "providers": [
+        {
+          "provider": "nse_rss",
+          "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+          "snapshot_id": 30,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 4,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        },
+        {
+          "provider": "bse_rss",
+          "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+          "snapshot_id": 31,
+          "cache_status": "cache",
+          "warning": null,
+          "feed_items": 1,
+          "matched": 0,
+          "inserted_origins": 0,
+          "rejected": 0
+        }
+      ],
+      "errors": [],
+      "attachment_warnings": [],
+      "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+    }
+  }
+]

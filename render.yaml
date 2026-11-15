@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: finn-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements-lock.txt
+    startCommand: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT --loop asyncio --workers 1 --no-proxy-headers
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.12
+      - key: FINN_ACCESS_MODE
+        value: reviewer
+      - key: FINN_DATABASE_URL
+        sync: false
+      - key: FINN_STORAGE_BACKEND
+        value: supabase
+      - key: FINN_STORAGE_URL
+        sync: false
+      - key: FINN_STORAGE_KEY
+        sync: false
+      - key: FINN_STORAGE_BUCKET
+        value: finn-private
+      - key: FINN_REVIEWER_TOKEN
+        sync: false
+      - key: FINN_CORS_ORIGINS
+        sync: false
+      - key: FINN_EPHEMERAL_STORAGE
+        value: false
+      - key: FINN_BOOTSTRAP_ENABLED
+        value: false
+      - key: FINN_AUTO_REFRESH_ENABLED
+        value: true
+      - key: FINN_SOURCE_REFRESH_SECONDS
+        value: 900

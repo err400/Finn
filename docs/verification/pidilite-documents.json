@@ -1,0 +1,89 @@
+[
+  {
+    "id": 153,
+    "ticker": "PIDILITIND",
+    "dataset": "documents",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 21:19:41.322913+00:00",
+    "completed_at": "2026-11-15 21:19:49.184060+00:00",
+    "details": {
+      "documents": [
+        {
+          "id": 25,
+          "kind": "earnings_transcript",
+          "sha256": "cf87820950b9388a64719af732334b074c16dd69ff884e6fdcc903fb91b89e3a",
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-transcript-of-earnings-call-q2fy2027.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 26,
+          "kind": "quarterly_results",
+          "sha256": "5eaa77364bdbd15dec0b7fd97952b9183f5e0008a64c055f3a2eeef56e3f6d46",
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-unaudited-financial-results-30-09-2026.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 27,
+          "kind": "exchange_filing",
+          "sha256": "9e54ad91e3cd1da7c5268246a2e47a708e4748fbb2a9b3158b6b4e1169bbe407",
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-appointment-of-smp-mr-huzefa-kanchwala-and-mr-manish-airee-27-10-2026.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 28,
+          "kind": "exchange_filing",
+          "sha256": "04afd8c72dfb8fc9726e4353ff4c70f288d6d05b76ffbbf9d97519cfebd822c0",
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-finemake-transfer-of-shares-to-founders-29-09-2026.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 29,
+          "kind": "exchange_filing",
+          "sha256": "e5a00b77f6850dc9ae3fb6530e172c1e75f64552de440a27b0a982b547aa69d9",
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2025-26/se-intimation-appointment-of-mrs-ami-parikh-and-mr-rajesh-joshi-as-smp-02-02-2026.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 30,
+          "kind": "exchange_filing",
+          "sha256": "5f0f9939bb2dde7afee13bfb11f425a66eb9fb3d2d52d4b1a3034953baa91dfc",
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2025-26/se-intimation-appointment-of-smp-01.04.2025.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 31,
+          "kind": "earnings_transcript",
+          "sha256": "236f3a0c846141220693a4a26e31c0a848f507fbb15bdfe3bd0cee64866e4d9b",
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/analyst-meet/fy-2025-26/se-intimation-transcript-of-earnings-call-q2fy26.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 32,
+          "kind": "annual_report",
+          "sha256": "17d4edae53d61c0555712893076cba45b9281bc32df6a483f8282a9b29c00347",
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/financial/annual-reports/annual-report-2024-25.pdf",
+          "cache_status": "network",
+          "warning": null,
+          "extraction_status": "extracted"
+        }
+      ],
+      "errors": [],
+      "discovery": "reviewed exact issuer URLs; not exhaustive coverage"
+    }
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Aarav Demo Mehta",
+    "expertise": [
+      "IT services",
+      "enterprise sales"
+    ],
+    "ticker": "INFY",
+    "role": "Former account director",
+    "start_year": 2015,
+    "end_year": 2021,
+    "synthetic": true,
+    "provenance": "Invented demo persona and employment history; no claim about a real person or relationship."
+  },
+  {
+    "name": "Mira Demo Rao",
+    "expertise": [
+      "IT services",
+      "delivery operations"
+    ],
+    "ticker": "TCS",
+    "role": "Former delivery manager",
+    "start_year": 2016,
+    "end_year": 2022,
+    "synthetic": true,
+    "provenance": "Invented demo persona and employment history; no claim about a real person or relationship."
+  },
+  {
+    "name": "Dev Demo Shah",
+    "expertise": [
+      "specialty chemicals",
+      "distribution"
+    ],
+    "ticker": "PIDILITIND",
+    "role": "Former channel manager",
+    "start_year": 2017,
+    "end_year": 2023,
+    "synthetic": true,
+    "provenance": "Invented demo persona and employment history; no claim about a real person or relationship."
+  },
+  {
+    "name": "Nisha Demo Sen",
+    "expertise": [
+      "chemicals",
+      "plant operations"
+    ],
+    "ticker": "DEEPAKNTR",
+    "role": "Former process engineer",
+    "start_year": 2018,
+    "end_year": 2023,
+    "synthetic": true,
+    "provenance": "Invented demo persona and employment history; no claim about a real person or relationship."
+  },
+  {
+    "name": "Kabir Demo Das",
+    "expertise": [
+      "telecommunications"
+    ],
+    "ticker": "BHARTIARTL",
+    "role": "Former enterprise sales manager",
+    "start_year": 2014,
+    "end_year": 2020,
+    "synthetic": true,
+    "provenance": "Invented demo persona and employment history; no claim about a real person or relationship."
+  },
+  {
+    "name": "Leela Demo Nair",
+    "expertise": [
+      "textiles",
+      "supply chain"
+    ],
+    "ticker": "KPRMILL",
+    "role": "Former sourcing manager",
+    "start_year": 2018,
+    "end_year": 2022,
+    "synthetic": true,
+    "provenance": "Invented demo persona and employment history; no claim about a real person or relationship."
+  },
+  {
+    "name": "Kunal Demo Bose",
+    "expertise": [
+      "retail",
+      "consumer goods"
+    ],
+    "ticker": "RELIANCE",
+    "role": "Former retail planning manager",
+    "start_year": 2015,
+    "end_year": 2020,
+    "synthetic": true,
+    "provenance": "Wholly invented demo persona, career and relationships. Not a claim about any identifiable real person."
+  },
+  {
+    "name": "Priya Demo Menon",
+    "expertise": [
+      "energy",
+      "upstream",
+      "operating agreements",
+      "capex"
+    ],
+    "ticker": "RELIANCE",
+    "role": "Former upstream project planning specialist",
+    "start_year": 2016,
+    "end_year": 2022,
+    "synthetic": true,
+    "provenance": "Wholly invented demo persona, career and relationships. Not a claim about any identifiable real person."
+  },
+  {
+    "name": "Rohan Demo Kapoor",
+    "expertise": [
+      "IT services",
+      "finance",
+      "results"
+    ],
+    "ticker": "INFY",
+    "role": "Former finance planning analyst",
+    "start_year": 2014,
+    "end_year": 2020,
+    "synthetic": true,
+    "provenance": "Wholly invented demo persona, career and relationships. Not a claim about any identifiable real person."
+  },
+  {
+    "name": "Sana Demo Ali",
+    "expertise": [
+      "chemicals",
+      "litigation",
+      "compliance"
+    ],
+    "ticker": "DEEPAKNTR",
+    "role": "Former compliance operations manager",
+    "start_year": 2015,
+    "end_year": 2021,
+    "synthetic": true,
+    "provenance": "Wholly invented demo persona, career and relationships. Not a claim about any identifiable real person."
+  }
+]

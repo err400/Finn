@@ -1,0 +1,71 @@
+{
+  "http_status": 201,
+  "status": "completed",
+  "model": "openai-compatible:inference.hyde.tech:hyde/glm-5.3-flash:extractive-v2",
+  "evidence_passages": 10,
+  "verified_claim_count": 6,
+  "model_error": null,
+  "cache_hit": false,
+  "citations": [
+    {
+      "document_id": 4,
+      "page": 130,
+      "url": "https://www.ril.com/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf#page=130",
+      "sha256": "bb541a68a0440fd4e27527afbb79f9a0e7584ae430fe9af244700709cacc0769"
+    },
+    {
+      "document_id": 4,
+      "page": 15,
+      "url": "https://www.ril.com/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf#page=15",
+      "sha256": "bb541a68a0440fd4e27527afbb79f9a0e7584ae430fe9af244700709cacc0769"
+    },
+    {
+      "document_id": 4,
+      "page": 130,
+      "url": "https://www.ril.com/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf#page=130",
+      "sha256": "bb541a68a0440fd4e27527afbb79f9a0e7584ae430fe9af244700709cacc0769"
+    },
+    {
+      "document_id": 4,
+      "page": 94,
+      "url": "https://www.ril.com/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf#page=94",
+      "sha256": "bb541a68a0440fd4e27527afbb79f9a0e7584ae430fe9af244700709cacc0769"
+    },
+    {
+      "document_id": 5,
+      "page": 42,
+      "url": "https://www.ril.com/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf#page=42",
+      "sha256": "0ec375dcbc69b69a95cd13f37fe090d61071d6e6a66707f2c73b26b77c6bd0d0"
+    },
+    {
+      "document_id": 5,
+      "page": 22,
+      "url": "https://www.ril.com/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf#page=22",
+      "sha256": "0ec375dcbc69b69a95cd13f37fe090d61071d6e6a66707f2c73b26b77c6bd0d0"
+    },
+    {
+      "document_id": 6,
+      "page": 11,
+      "url": "https://www.ril.com/sites/default/files/2025-04/Q4_FY2024_25_Transcript.pdf#page=11",
+      "sha256": "54314a6a94c43248864f6a664700b0acec090cf7f5df88f6a52f26788520bb20"
+    },
+    {
+      "document_id": 6,
+      "page": 8,
+      "url": "https://www.ril.com/sites/default/files/2025-04/Q4_FY2024_25_Transcript.pdf#page=8",
+      "sha256": "54314a6a94c43248864f6a664700b0acec090cf7f5df88f6a52f26788520bb20"
+    },
+    {
+      "document_id": 5,
+      "page": 12,
+      "url": "https://www.ril.com/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf#page=12",
+      "sha256": "0ec375dcbc69b69a95cd13f37fe090d61071d6e6a66707f2c73b26b77c6bd0d0"
+    },
+    {
+      "document_id": 5,
+      "page": 32,
+      "url": "https://www.ril.com/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf#page=32",
+      "sha256": "0ec375dcbc69b69a95cd13f37fe090d61071d6e6a66707f2c73b26b77c6bd0d0"
+    }
+  ]
+}

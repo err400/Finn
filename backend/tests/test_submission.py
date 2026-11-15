@@ -1,0 +1,140 @@
+"""Release regressions: private demo boundary, durable storage, grounding and edge cases."""
+import hashlib
+import os
+from types import SimpleNamespace
+import httpx
+import pytest
+from sqlalchemy import select, text
+from fastapi.testclient import TestClient
+from app.core.config import Settings
+from app.core import access
+from app.providers.storage import SupabaseBlobStore
+from app.providers.contracts import ProviderError
+from app.providers.llm import validate_synthesis
+from app.services.financials import financial_comparisons
+from app.models.entities import Company
+from test_intelligence import primary
+
+
+def test_reviewer_configuration_fails_closed():
+    with pytest.raises(ValueError):Settings(_env_file=None,access_mode='reviewer')
+    with pytest.raises(ValueError):Settings(_env_file=None,access_mode='reviewer',reviewer_token='x'*32)
+    cfg=Settings(_env_file=None,access_mode='reviewer',reviewer_token='x'*32,ephemeral_storage=True)
+    assert 'x'*32 not in repr(cfg)
+
+
+def test_remote_reviewer_cors_auth_and_raw_file_restriction(client,monkeypatch):
+    c,_=client
+    cfg=Settings(_env_file=None,access_mode='reviewer',reviewer_token='x'*32,ephemeral_storage=True)
+    monkeypatch.setattr(access,'get_settings',lambda:cfg)
+    import app.api.ingestion as ingestion
+    monkeypatch.setattr(ingestion,'get_settings',lambda:cfg)
+    access._windows.clear()
+    assert c.get('/api/v1/network').status_code==401
+    assert c.get('/api/v1/portfolio').status_code==401
+    assert c.get('/api/v1/health').status_code==200
+    headers={'Authorization':'Bearer '+'x'*32}
+    assert c.get('/api/v1/portfolio/overview',headers=headers).status_code==200
+    assert c.get('/api/v1/network',headers={**headers,'Origin':'https://evil.example'}).status_code==403
+    assert c.get('/api/v1/data/documents/1/file',headers=headers).status_code==403
+    assert c.get('/api/v1/portfolio',headers={'Authorization':'Bearer wrong'}).status_code==401
+    assert c.get('/api/v1/portfolio',headers=headers).headers['cache-control']=='no-store'
+    access._windows.clear()
+
+
+def test_reviewer_budget_and_non_finite_thresholds(client):
+    access._windows.clear()
+    access.check_budget('test',1,60)
+    with pytest.raises(Exception) as caught:access.check_budget('test',1,60)
+    assert caught.value.status_code==429
+    access._windows.clear()
+    c,_=client
+    for value in ['NaN','Infinity','-Infinity','0','-2','10001']:
+        assert c.post('/api/v1/push/rules',json={'name':'Invalid','kind':'price_move','threshold':value}).status_code==422
+    assert c.post('/api/v1/research',json={'ticker':'123456.BO','question':'What is the business?'}).status_code==422
+
+
+def test_empty_digest_missing_documents_and_no_network(client):
+    c,factory=client
+    result=c.get('/api/v1/push/digest').json()
+    assert result['total_available']==0 and result['important']==[]
+    research=c.post('/api/v1/research',json={'ticker':'UNSUPPORTED','question':'What is the business?'}).json()
+    assert research['status']=='insufficient_evidence' and not research['evidence'] and research['answer'] is None
+    assert c.get('/api/v1/network/recommendations?company=CERA').json()['recommendations']==[]
+
+
+def test_conflicting_newest_financial_values_are_withheld(client):
+    _,factory=client
+    table='CONSOLIDATED FINANCIAL HIGHLIGHTS\n(₹ in crore)\n4Q FY25 3Q FY25 4Q FY24 % chg. Y-o-Y FY25 FY24\n1 Gross Revenue {value} 100 80 37.5 410 300\n'
+    with factory() as db:
+        company=db.scalar(select(Company).where(Company.ticker=='RELIANCE'))
+        primary(db,company.id,'quarterly_results',table.format(value=110),'conflict-one')
+        primary(db,company.id,'quarterly_results',table.format(value=120),'conflict-two')
+        result=financial_comparisons(db,company.id)
+        assert result['metrics']==[] and result['conflicting_periods']==[{'metric':'gross_revenue','period_end':'2025-03-31'}]
+
+
+def test_uncited_model_limitation_cannot_smuggle_financial_claims():
+    result=validate_synthesis({'claims':[],'limitations':['Revenue was an invented 999 crore.']},[])
+    assert '999' not in str(result)
+
+
+def test_private_storage_round_trip_idempotency_and_safe_failure():
+    body=b'%PDF-synthetic storage test';sha=hashlib.sha256(body).hexdigest();objects={}
+    settings=SimpleNamespace(storage_url='https://test.supabase.co',storage_bucket='finn-private',storage_key=SimpleNamespace(get_secret_value=lambda:'synthetic-storage-key'))
+    def handler(request):
+        assert request.headers['authorization']=='Bearer synthetic-storage-key'
+        if request.method=='POST':objects[sha]=request.content;return httpx.Response(200,json={'Key':sha})
+        assert '/object/authenticated/finn-private/' in request.url.path
+        return httpx.Response(200,content=objects[sha])
+    with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+        store=SupabaseBlobStore(settings,client);store.put(sha,body);store.put(sha,body)
+        assert store.get(sha)==body
+        with pytest.raises(ProviderError):store.put(sha,b'corrupt')
+        with pytest.raises(ProviderError):store.get('../private')
+    with httpx.Client(transport=httpx.MockTransport(lambda _:httpx.Response(403,text='sensitive provider detail'))) as client:
+        with pytest.raises(ProviderError) as caught:SupabaseBlobStore(settings,client).get(sha)
+        assert 'sensitive' not in str(caught.value) and 'synthetic-storage-key' not in str(caught.value)
+
+
+@pytest.mark.skipif(not os.getenv('FINN_TEST_POSTGRES_URL'),reason='Dedicated Postgres integration URL not configured')
+def test_postgres_persistence_retrieval_and_sqlite_migration(tmp_path):
+    from sqlalchemy.orm import Session
+    from app.db.session import Base,make_engine
+    from app.db.initialize import initialize_database
+    from app.db.seed import seed_demo,DEMO_OWNER
+    from app.db.network_seed import seed_network
+    from app.services.retrieval import retrieve
+    from app.migrate_local import copy_database
+    url=os.environ['FINN_TEST_POSTGRES_URL']
+    assert url.split('?')[0].endswith('/finn_audit'),'Use a dedicated test database named finn_audit'
+    target=make_engine(url)
+    Base.metadata.drop_all(target);initialize_database(target)
+    source=make_engine('sqlite:///'+str(tmp_path/'source.db'));Base.metadata.create_all(source)
+    with Session(source) as db:
+        seed_demo(db);seed_network(db)
+        company=db.scalar(select(Company).where(Company.ticker=='RELIANCE'))
+        primary(db,company.id,'annual_report','Synthetic business segments include energy and retail. Operating cash flow is discussed.','durable-ar')
+    counts=copy_database(source,target)
+    assert counts['companies']==18
+    target.dispose()  # Simulate API restart: establish a fresh connection pool.
+    target=make_engine(url)
+    with Session(target) as db:
+        company=db.scalar(select(Company).where(Company.ticker=='RELIANCE'))
+        hits,docs=retrieve(db,company.id,'business segments','snapshot')
+        assert hits and hits[0]['page']==1 and hits[0]['url'].endswith('#page=1')
+        assert db.scalar(text("SELECT relrowsecurity FROM pg_class WHERE relname='companies'")) is True
+        # Sequence reset after copy must allow subsequent inserts.
+        db.add(Company(ticker='TESTNEW',name='Synthetic test company',sector='test',exchange='NSE'));db.commit()
+    with pytest.raises(ValueError):copy_database(source,target)
+    Base.metadata.drop_all(target);target.dispose();source.dispose()
+
+
+def test_concurrent_research_is_bounded_without_duplicate_model_requests(client):
+    from app.api.router import research_slot
+    c,_=client
+    assert research_slot.acquire(blocking=False)
+    try:
+        r=c.post('/api/v1/research',json={'ticker':'TCS','question':'What is the business?'})
+        assert r.status_code==429 and r.headers['retry-after']=='15'
+    finally:research_slot.release()

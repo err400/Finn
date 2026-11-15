@@ -1,0 +1,25 @@
+[
+  {
+    "id": 21,
+    "ticker": "RELIANCE",
+    "dataset": "filings",
+    "mode": "replay",
+    "status": "success",
+    "started_at": "2026-11-15 19:51:55.049018+00:00",
+    "completed_at": "2026-11-15 19:51:55.060244+00:00",
+    "details": {
+      "mode": "replay",
+      "label": "Historical replay \u2014 genuinely retrieved issuer-hosted exchange disclosures; original publication dates retained.",
+      "items": [
+        {
+          "document_id": 7,
+          "inserted_origin": true,
+          "source_url": "https://www.ril.com/sites/default/files/2025-07/SE_29072025.pdf",
+          "cache_status": "cache"
+        }
+      ],
+      "errors": [],
+      "coverage": "Selected historical records only; not a live feed or complete archive."
+    }
+  }
+]

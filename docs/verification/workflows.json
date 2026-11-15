@@ -1,0 +1,64 @@
+{
+  "data_counts": {
+    "prices": 1872,
+    "documents": 7,
+    "filings": 1,
+    "raw_snapshots": 51
+  },
+  "portfolio_companies": 18,
+  "llm_configured": true,
+  "alert_checks": [
+    {
+      "kind": "price_move",
+      "ticker": "RELIANCE",
+      "observation_date": "2026-11-02",
+      "triggering_value": "11.5976",
+      "threshold": "3",
+      "sources": [
+        {
+          "snapshot_id": 32,
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/RELIANCE.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "496aee4d9bd06f7127d96304fc02c7959baab3e4cf9be14da08036b2e94d2f1d",
+          "retrieved_at": "2026-11-15T20:14:57.063039+00:00"
+        }
+      ]
+    },
+    {
+      "kind": "volume_spike",
+      "ticker": "DEEPAKNTR",
+      "observation_date": "2026-10-30",
+      "triggering_value": "24.0665",
+      "threshold": "2",
+      "sources": [
+        {
+          "snapshot_id": 47,
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/DEEPAKNTR.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "6453737be0202ee5b978ee483f65d652152c412f102d2814a281d1c0ba550bb3",
+          "retrieved_at": "2026-11-15T20:15:26.918116+00:00"
+        }
+      ]
+    },
+    {
+      "kind": "announcement_category",
+      "ticker": "RELIANCE",
+      "observation_date": "2025-07-29",
+      "triggering_value": "press_release",
+      "sources": [
+        {
+          "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-07/SE_29072025.pdf",
+          "raw_published": "2025-07-29",
+          "mode": "replay"
+        }
+      ]
+    }
+  ],
+  "event_to_person": {
+    "filing_id": 1,
+    "publication_date": "2025-07-29",
+    "source": "https://www.ril.com/sites/default/files/2025-07/SE_29072025.pdf#page=1",
+    "mode": "replay",
+    "recommended_synthetic_person": "Priya Demo Menon",
+    "degree": 2
+  },
+  "test_rules": "Created for verification then paused; historical trigger evidence retained."
+}

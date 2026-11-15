@@ -1,0 +1,25 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.db
+*.db-shm
+*.db-wal
+node_modules/
+dist/
+.DS_Store
+*.tsbuildinfo
+backend/data/
+docs/source-probes/
+.vercel/
+*.pem
+*.key
+*.zip
+*.dump
+*.sql.gz
+submission-private/
+ENAM_Founding AI Engineer Build Challenge_Main.pdf
+ENAM_Build_Challenge_Reference.pdf

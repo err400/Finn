@@ -1,0 +1,128 @@
+[
+  {
+    "ticker": "RELIANCE",
+    "name": "Reliance Industries",
+    "sector": "Energy",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "TCS",
+    "name": "Tata Consultancy Services",
+    "sector": "IT services",
+    "exchange": "NSE",
+    "research_demo": true
+  },
+  {
+    "ticker": "INFY",
+    "name": "Infosys",
+    "sector": "IT services",
+    "exchange": "NSE",
+    "research_demo": true
+  },
+  {
+    "ticker": "HDFCBANK",
+    "name": "HDFC Bank",
+    "sector": "Banking",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "ICICIBANK",
+    "name": "ICICI Bank",
+    "sector": "Banking",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "ITC",
+    "name": "ITC",
+    "sector": "Consumer goods",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "HINDUNILVR",
+    "name": "Hindustan Unilever",
+    "sector": "Consumer goods",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "MARUTI",
+    "name": "Maruti Suzuki India",
+    "sector": "Automotive",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "SUNPHARMA",
+    "name": "Sun Pharmaceutical Industries",
+    "sector": "Pharmaceuticals",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "LT",
+    "name": "Larsen & Toubro",
+    "sector": "Engineering",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "TATASTEEL",
+    "name": "Tata Steel",
+    "sector": "Metals",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "ULTRACEMCO",
+    "name": "UltraTech Cement",
+    "sector": "Cement",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "BHARTIARTL",
+    "name": "Bharti Airtel",
+    "sector": "Telecommunications",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "TITAN",
+    "name": "Titan Company",
+    "sector": "Consumer discretionary",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "PIDILITIND",
+    "name": "Pidilite Industries",
+    "sector": "Specialty chemicals",
+    "exchange": "NSE",
+    "research_demo": true
+  },
+  {
+    "ticker": "DEEPAKNTR",
+    "name": "Deepak Nitrite",
+    "sector": "Chemicals",
+    "exchange": "NSE",
+    "research_demo": true
+  },
+  {
+    "ticker": "CERA",
+    "name": "Cera Sanitaryware",
+    "sector": "Building products",
+    "exchange": "NSE",
+    "research_demo": false
+  },
+  {
+    "ticker": "KPRMILL",
+    "name": "K.P.R. Mill",
+    "sector": "Textiles",
+    "exchange": "NSE",
+    "research_demo": false
+  }
+]

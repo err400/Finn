@@ -1,0 +1,88 @@
+{
+  "total_available": 18,
+  "important": 12,
+  "routine": 6,
+  "archive_coverage": {
+    "stored_filings": 18,
+    "earliest_publication_date": "2025-07-29",
+    "latest_publication_date": "2026-11-13",
+    "exhaustive": false,
+    "companies_with_filings": 1,
+    "portfolio_companies": 18,
+    "by_company": [
+      {
+        "ticker": "BHARTIARTL",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "CERA",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "DEEPAKNTR",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "HDFCBANK",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "HINDUNILVR",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "ICICIBANK",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "INFY",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "ITC",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "KPRMILL",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "LT",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "MARUTI",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "PIDILITIND",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "RELIANCE",
+        "stored_filings": 18
+      },
+      {
+        "ticker": "SUNPHARMA",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "TATASTEEL",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "TCS",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "TITAN",
+        "stored_filings": 0
+      },
+      {
+        "ticker": "ULTRACEMCO",
+        "stored_filings": 0
+      }
+    ]
+  },
+  "all_have_original_sources": true
+}

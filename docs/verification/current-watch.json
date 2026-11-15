@@ -1,0 +1,1140 @@
+{
+  "checked_at": "2026-11-16T01:45:31.266630+05:30",
+  "source_refresh_requested": true,
+  "runs": [
+    {
+      "id": 40,
+      "ticker": "RELIANCE",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:14:56.580506+00:00",
+      "completed_at": "2026-11-15 20:14:57.106403+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/RELIANCE.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 32,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 41,
+      "ticker": "TCS",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:14:57.108031+00:00",
+      "completed_at": "2026-11-15 20:14:58.917236+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TCS.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 33,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 42,
+      "ticker": "INFY",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:14:58.918884+00:00",
+      "completed_at": "2026-11-15 20:15:00.918313+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 34,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 43,
+      "ticker": "HDFCBANK",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:00.919634+00:00",
+      "completed_at": "2026-11-15 20:15:02.958440+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/HDFCBANK.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 35,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 44,
+      "ticker": "ICICIBANK",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:02.959729+00:00",
+      "completed_at": "2026-11-15 20:15:04.912819+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ICICIBANK.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 36,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 45,
+      "ticker": "ITC",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:04.914479+00:00",
+      "completed_at": "2026-11-15 20:15:06.989820+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ITC.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 37,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 46,
+      "ticker": "HINDUNILVR",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:06.991096+00:00",
+      "completed_at": "2026-11-15 20:15:08.938095+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/HINDUNILVR.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 38,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 47,
+      "ticker": "MARUTI",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:08.939503+00:00",
+      "completed_at": "2026-11-15 20:15:10.943940+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MARUTI.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 39,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 48,
+      "ticker": "SUNPHARMA",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:10.945261+00:00",
+      "completed_at": "2026-11-15 20:15:12.973452+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SUNPHARMA.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 40,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 49,
+      "ticker": "LT",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:12.974789+00:00",
+      "completed_at": "2026-11-15 20:15:14.970170+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/LT.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 41,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 50,
+      "ticker": "TATASTEEL",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:14.971666+00:00",
+      "completed_at": "2026-11-15 20:15:16.980433+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TATASTEEL.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 42,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 51,
+      "ticker": "ULTRACEMCO",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:16.982520+00:00",
+      "completed_at": "2026-11-15 20:15:19.037373+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ULTRACEMCO.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 43,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 52,
+      "ticker": "BHARTIARTL",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:19.039397+00:00",
+      "completed_at": "2026-11-15 20:15:20.956343+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BHARTIARTL.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 44,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 53,
+      "ticker": "TITAN",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:20.957692+00:00",
+      "completed_at": "2026-11-15 20:15:22.979160+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TITAN.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 45,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 54,
+      "ticker": "PIDILITIND",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:22.980403+00:00",
+      "completed_at": "2026-11-15 20:15:24.970109+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PIDILITIND.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 46,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 55,
+      "ticker": "DEEPAKNTR",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:24.971477+00:00",
+      "completed_at": "2026-11-15 20:15:26.956776+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DEEPAKNTR.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 47,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 56,
+      "ticker": "CERA",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:26.958282+00:00",
+      "completed_at": "2026-11-15 20:15:28.969642+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CERA.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 48,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 57,
+      "ticker": "KPRMILL",
+      "dataset": "prices",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:28.974690+00:00",
+      "completed_at": "2026-11-15 20:15:30.980839+00:00",
+      "details": {
+        "provider": "yahoo_chart",
+        "inserted": 81,
+        "updated": 0,
+        "returned": 81,
+        "skipped": 0,
+        "start": "2026-07-19",
+        "end_exclusive": "2026-11-16",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/KPRMILL.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+        "snapshot_id": 49,
+        "cache_status": "network",
+        "warning": null,
+        "price_basis": "Provider daily OHLC (not total-return adjusted); adjusted close is stored separately; Yahoo may restate history for corporate actions."
+      }
+    },
+    {
+      "id": 58,
+      "ticker": "RELIANCE",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:30.982451+00:00",
+      "completed_at": "2026-11-15 20:15:31.205387+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "network",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "network",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 59,
+      "ticker": "TCS",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.206840+00:00",
+      "completed_at": "2026-11-15 20:15:31.208788+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 60,
+      "ticker": "INFY",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.209907+00:00",
+      "completed_at": "2026-11-15 20:15:31.212020+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 61,
+      "ticker": "HDFCBANK",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.213203+00:00",
+      "completed_at": "2026-11-15 20:15:31.215363+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 62,
+      "ticker": "ICICIBANK",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.216711+00:00",
+      "completed_at": "2026-11-15 20:15:31.218518+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 63,
+      "ticker": "ITC",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.219580+00:00",
+      "completed_at": "2026-11-15 20:15:31.221324+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 64,
+      "ticker": "HINDUNILVR",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.222380+00:00",
+      "completed_at": "2026-11-15 20:15:31.224141+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 65,
+      "ticker": "MARUTI",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.225219+00:00",
+      "completed_at": "2026-11-15 20:15:31.227007+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 66,
+      "ticker": "SUNPHARMA",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.228471+00:00",
+      "completed_at": "2026-11-15 20:15:31.230838+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 67,
+      "ticker": "LT",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.232643+00:00",
+      "completed_at": "2026-11-15 20:15:31.234881+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 68,
+      "ticker": "TATASTEEL",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.236048+00:00",
+      "completed_at": "2026-11-15 20:15:31.238396+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 69,
+      "ticker": "ULTRACEMCO",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.239606+00:00",
+      "completed_at": "2026-11-15 20:15:31.241502+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 70,
+      "ticker": "BHARTIARTL",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.242700+00:00",
+      "completed_at": "2026-11-15 20:15:31.244628+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 71,
+      "ticker": "TITAN",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.245717+00:00",
+      "completed_at": "2026-11-15 20:15:31.248137+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 72,
+      "ticker": "PIDILITIND",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.249466+00:00",
+      "completed_at": "2026-11-15 20:15:31.251257+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 73,
+      "ticker": "DEEPAKNTR",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.252322+00:00",
+      "completed_at": "2026-11-15 20:15:31.254045+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 74,
+      "ticker": "CERA",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.255369+00:00",
+      "completed_at": "2026-11-15 20:15:31.257313+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    },
+    {
+      "id": 75,
+      "ticker": "KPRMILL",
+      "dataset": "filings",
+      "mode": "live",
+      "status": "success",
+      "started_at": "2026-11-15 20:15:31.258453+00:00",
+      "completed_at": "2026-11-15 20:15:31.260267+00:00",
+      "details": {
+        "mode": "live",
+        "providers": [
+          {
+            "provider": "nse_rss",
+            "source_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+            "snapshot_id": 50,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 4,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          },
+          {
+            "provider": "bse_rss",
+            "source_url": "https://www.bseindia.com/data/xml/announcements.xml",
+            "snapshot_id": 51,
+            "cache_status": "cache",
+            "warning": null,
+            "feed_items": 1,
+            "matched": 0,
+            "inserted_origins": 0,
+            "rejected": 0
+          }
+        ],
+        "errors": [],
+        "attachment_warnings": [],
+        "coverage": "Only items currently in the public RSS windows. Zero matches does not establish absence of announcements; no historical completeness guarantee."
+      }
+    }
+  ],
+  "evaluation": {
+    "as_of": "2026-11-16",
+    "mode": "live",
+    "label": "EOD evaluation \u2014 not real-time",
+    "new_alert_ids": [],
+    "new_alert_count": 0,
+    "skipped": [],
+    "delivery": "Persistent in-app inbox. Evaluation is explicit or scheduled by the local CLI; no email, SMS or browser notifications."
+  },
+  "previous_day_evaluation": {
+    "as_of": "2026-11-15",
+    "mode": "live",
+    "label": "EOD evaluation \u2014 not real-time",
+    "new_alert_ids": [],
+    "new_alert_count": 0,
+    "skipped": [],
+    "delivery": "Persistent in-app inbox. Evaluation is explicit or scheduled by the local CLI; no email, SMS or browser notifications."
+  }
+}

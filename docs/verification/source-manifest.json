@@ -1,0 +1,596 @@
+{
+  "usage": "Local personal/educational verification; source rights are not transferred.",
+  "prices": [
+    {
+      "ticker": "BHARTIARTL",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 12,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/BHARTIARTL.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/BHARTIARTL.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "6f7b6f3f96270ae942d2401a9f58f4e1f49cdd5ac49768f707cecaca7be934a4",
+          "fetched_at": "2026-11-15T19:48:15.232214+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 44,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/BHARTIARTL.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/BHARTIARTL.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "e50f141e3ae3f79c46ee08f42855dcb549fafdbfab9b427ffaf7be9224f5d0c6",
+          "fetched_at": "2026-11-15T20:15:20.924150+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "CERA",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 13,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/CERA.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/CERA.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "bef2a0653fbb9340d49bff480488bc9df0825236840d2afceba7296232768a11",
+          "fetched_at": "2026-11-15T19:48:17.176277+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 48,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/CERA.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/CERA.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "852d7e4a3901583f730dc0b3de6c11c9621aa2899a8a0a9934a6e52a655e3eb5",
+          "fetched_at": "2026-11-15T20:15:28.931850+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "DEEPAKNTR",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 14,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/DEEPAKNTR.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/DEEPAKNTR.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "e1dfda56c744560471ff6595c54c8357a8ff3cb8c577a734307b0c5760a28d6f",
+          "fetched_at": "2026-11-15T19:48:19.187294+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 47,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/DEEPAKNTR.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/DEEPAKNTR.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "6453737be0202ee5b978ee483f65d652152c412f102d2814a281d1c0ba550bb3",
+          "fetched_at": "2026-11-15T20:15:26.918116+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "HDFCBANK",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 15,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/HDFCBANK.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/HDFCBANK.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "52cccff2ada16fd1ee4feceb8daaf4226ebd4606ef660858897e01580e8bd85b",
+          "fetched_at": "2026-11-15T19:48:21.177473+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 35,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/HDFCBANK.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/HDFCBANK.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "98d6a3bec98c04a57834923f5275ad1690b4a7ec3681ebb08ce571722463a21f",
+          "fetched_at": "2026-11-15T20:15:02.918480+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "HINDUNILVR",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 16,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/HINDUNILVR.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/HINDUNILVR.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "5b2d0e45706217092325b1d0e2b953611a366c27c99858b16a58c72807d7a443",
+          "fetched_at": "2026-11-15T19:48:23.193562+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 38,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/HINDUNILVR.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/HINDUNILVR.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "506b423b093a7ab940a7cfb4cb43528d7fda3424faa01505c0f8fdcdc9fad82b",
+          "fetched_at": "2026-11-15T20:15:08.898548+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "ICICIBANK",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 17,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/ICICIBANK.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/ICICIBANK.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "5ae7ca849bc6622d8c013cec7e9c911c8eba7e633225e4c664478dd2b69295c8",
+          "fetched_at": "2026-11-15T19:48:25.215681+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 36,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/ICICIBANK.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/ICICIBANK.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "3b1107e83f962c46e5e52e79cd9df3020f657afca5e5f1622206132e0f8bfb67",
+          "fetched_at": "2026-11-15T20:15:04.877647+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "INFY",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 18,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "980c127e9340062b5cb1bd3fe1bc648386b6849c57b118a8f71a1777aa185676",
+          "fetched_at": "2026-11-15T19:48:27.225564+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 34,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "97601c951d7b4308173d54adf4c9e90980ea8358722bac2dd19df443e1dae0ac",
+          "fetched_at": "2026-11-15T20:15:00.876785+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "ITC",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 19,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/ITC.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/ITC.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "8b73a4df891e326e946a184423797dea654bf0f7a3e68d0378ddcf48e523a2f8",
+          "fetched_at": "2026-11-15T19:48:29.210473+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 37,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/ITC.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/ITC.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "c8e7c46cc0191462245d8cbc68a3de7810b01ad7a2bb25ed5fa30fc4956131f7",
+          "fetched_at": "2026-11-15T20:15:06.948061+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "KPRMILL",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 20,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/KPRMILL.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/KPRMILL.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "929a4ea7e65a34f9fbd8d99dbd67a1b43f49a28e12454f5aa4c2b411385397df",
+          "fetched_at": "2026-11-15T19:48:31.199164+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 49,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/KPRMILL.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/KPRMILL.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "feb1302ac16216fdcbd0fe41969a6d6a26a85f1fb37aa5ea35e0ddd1dbf8ae9a",
+          "fetched_at": "2026-11-15T20:15:30.939268+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "LT",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 21,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/LT.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/LT.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "3f49af862559159131192bcb79e5cfad7687b0491f706e98349cd69940309db6",
+          "fetched_at": "2026-11-15T19:48:33.276619+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 41,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/LT.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/LT.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "a1c3d59baf235d03083cf609fc2b16041b9b018bd73498e8ff34cceebf0479c4",
+          "fetched_at": "2026-11-15T20:15:14.929886+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "MARUTI",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 22,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/MARUTI.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/MARUTI.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "065d9a3234d336692c2d7458689129bf52340e36c68f2f1e10ea65e340d136ac",
+          "fetched_at": "2026-11-15T19:48:35.253946+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 39,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/MARUTI.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/MARUTI.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "953638693fb62b27e12e378c835cb3b13a17781f24b477316f27906137463ba1",
+          "fetched_at": "2026-11-15T20:15:10.903619+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "PIDILITIND",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 23,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/PIDILITIND.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/PIDILITIND.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "e780df0349fcc77b9838682148fd1d1355bbedcc3b883b4cffa7e613b61c95e0",
+          "fetched_at": "2026-11-15T19:48:37.239465+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 46,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/PIDILITIND.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/PIDILITIND.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "32db7284bd1b40f41de67e7753613551e066a943bf665300d4ae4ae20dd924b5",
+          "fetched_at": "2026-11-15T20:15:24.934552+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "RELIANCE",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 24,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/RELIANCE.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/RELIANCE.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "5ef3ec610c9d2bb92bf1fb79e599d75f21c4bd75df3ad6dfd685f0995740eb0c",
+          "fetched_at": "2026-11-15T19:48:39.249655+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 32,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/RELIANCE.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/RELIANCE.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "496aee4d9bd06f7127d96304fc02c7959baab3e4cf9be14da08036b2e94d2f1d",
+          "fetched_at": "2026-11-15T20:14:57.063039+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "SUNPHARMA",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 25,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/SUNPHARMA.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/SUNPHARMA.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "6b47367087dd0d22693de7ceb66bff011102f3832d0f71b187789e34a2ce16d3",
+          "fetched_at": "2026-11-15T19:48:41.246810+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 40,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/SUNPHARMA.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/SUNPHARMA.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "b39dfa1aaac05686ce3c6ba21a3ef635b5a4b886c7f9ca3fe3b5ae0a1bfca74b",
+          "fetched_at": "2026-11-15T20:15:12.937935+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "TATASTEEL",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 26,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/TATASTEEL.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/TATASTEEL.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "3aa4e797a65860aaf636152548b3c651d1abefd90a5699fb5da91a42c76a034d",
+          "fetched_at": "2026-11-15T19:48:43.242476+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 42,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/TATASTEEL.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/TATASTEEL.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "4347197f6d473c5332f074e1558d39e80a94093d35b5066419dd3a8f150d4d22",
+          "fetched_at": "2026-11-15T20:15:16.935617+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "TCS",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 27,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/TCS.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/TCS.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "4d29327319d50453d54d63504d791b3418411dfd74a36e23e5d6ff5afd3f59c8",
+          "fetched_at": "2026-11-15T19:48:45.249403+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 33,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/TCS.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/TCS.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "06616077e97c4158e3b93e35e303c84ae8919048f27152b0312bffd968f76588",
+          "fetched_at": "2026-11-15T20:14:58.877573+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "TITAN",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 28,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/TITAN.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/TITAN.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "3fc5023b2dffef30ce7450ce96db3506509a9ddd9aa46317b47e896d789d2a5a",
+          "fetched_at": "2026-11-15T19:48:47.249968+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 45,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/TITAN.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/TITAN.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "0eaa9d28169f429c4ae69ac29c292317f1e38f51848942c3b097f7d5ff830f3d",
+          "fetched_at": "2026-11-15T20:15:22.946986+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "ticker": "ULTRACEMCO",
+      "observations": 104,
+      "sources": [
+        {
+          "snapshot_id": 29,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/ULTRACEMCO.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/ULTRACEMCO.NS?events=history&interval=1d&period1=1735669800&period2=1738348200",
+          "sha256": "f67646fdfc64cd783a39fed9378c1e825dd698b71bc62673d79c33d777c9ec27",
+          "fetched_at": "2026-11-15T19:48:49.247410+00:00",
+          "observations": 23,
+          "first_trading_date": "2025-01-01",
+          "last_trading_date": "2025-01-31"
+        },
+        {
+          "snapshot_id": 43,
+          "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/ULTRACEMCO.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/ULTRACEMCO.NS?events=history&interval=1d&period1=1784399400&period2=1794767400",
+          "sha256": "972cf35261df771f5f122f70346dbe9f5809052abcf102af27f6402f5887ba20",
+          "fetched_at": "2026-11-15T20:15:19.004260+00:00",
+          "observations": 81,
+          "first_trading_date": "2026-07-20",
+          "last_trading_date": "2026-11-13"
+        }
+      ]
+    }
+  ],
+  "primary_documents": [
+    {
+      "document_id": 1,
+      "ticker": "TCS",
+      "kind": "annual_report",
+      "title": "TCS Integrated Annual Report 2024-25",
+      "requested_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/ar/annual-report-2024-2025.pdf",
+      "final_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/ar/annual-report-2024-2025.pdf",
+      "sha256": "62ace414871697ed4c7ef34fd235fc3c89ed6208a30afe5ff2e49b5260fd8a57",
+      "fetched_at": "2026-11-15T19:33:04.045716+00:00",
+      "pages": 336,
+      "publication_date": null,
+      "date_basis": "Publication date unknown; not inferred from the reporting period or HTTP headers.",
+      "period_end": "2025-03-31",
+      "event_date": null,
+      "extraction_status": "extracted"
+    },
+    {
+      "document_id": 2,
+      "ticker": "TCS",
+      "kind": "earnings_transcript",
+      "title": "TCS Q4 FY2025 earnings conference call transcript",
+      "requested_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/q4/Management%20Commentary/Transcript%20of%20the%20Q4%202024-25%20Earnings%20Conference%20Call%20held%20at%201900%20hrs%20IST%20on%20Apr%2010,%202025.pdf",
+      "final_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/q4/Management%20Commentary/Transcript%20of%20the%20Q4%202024-25%20Earnings%20Conference%20Call%20held%20at%201900%20hrs%20IST%20on%20Apr%2010,%202025.pdf",
+      "sha256": "452d227dc14428e12164bc9935f240bf613d2412ee21cd388213d57c6365d2a6",
+      "fetched_at": "2026-11-15T19:33:06.492698+00:00",
+      "pages": 25,
+      "publication_date": null,
+      "date_basis": "Publication date unknown; not inferred from the reporting period or HTTP headers.",
+      "period_end": "2025-03-31",
+      "event_date": "2025-04-10",
+      "extraction_status": "extracted"
+    },
+    {
+      "document_id": 3,
+      "ticker": "TCS",
+      "kind": "exchange_filing",
+      "title": "TCS exchange disclosure: appointment of Company Secretary and Compliance Officer",
+      "requested_url": "https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2024-25/SE-Letter-CS.pdf",
+      "final_url": "https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2024-25/SE-Letter-CS.pdf",
+      "sha256": "591c43c1a3894c158658082972a050b852b2c873c484a39659173b853c449780",
+      "fetched_at": "2026-11-15T19:38:50.207881+00:00",
+      "pages": 2,
+      "publication_date": null,
+      "date_basis": "Publication date unknown; not inferred from the reporting period or HTTP headers.",
+      "period_end": null,
+      "event_date": "2024-07-11",
+      "extraction_status": "extracted"
+    },
+    {
+      "document_id": 4,
+      "ticker": "RELIANCE",
+      "kind": "annual_report",
+      "title": "Reliance Integrated Annual Report 2024-25",
+      "requested_url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf",
+      "final_url": "https://www.ril.com/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf",
+      "sha256": "bb541a68a0440fd4e27527afbb79f9a0e7584ae430fe9af244700709cacc0769",
+      "fetched_at": "2026-11-15T19:38:46.444820+00:00",
+      "pages": 146,
+      "publication_date": null,
+      "date_basis": "Publication date unknown; not inferred from the reporting period or HTTP headers.",
+      "period_end": "2025-03-31",
+      "event_date": null,
+      "extraction_status": "extracted"
+    },
+    {
+      "document_id": 5,
+      "ticker": "RELIANCE",
+      "kind": "quarterly_results",
+      "title": "Reliance consolidated results for quarter/year ended March 31, 2025",
+      "requested_url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf",
+      "final_url": "https://www.ril.com/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf",
+      "sha256": "0ec375dcbc69b69a95cd13f37fe090d61071d6e6a66707f2c73b26b77c6bd0d0",
+      "fetched_at": "2026-11-15T19:34:10.267352+00:00",
+      "pages": 44,
+      "publication_date": "2025-04-25",
+      "date_basis": "Issuer financial-reporting index lists Apr 25, 2025; the PDF cover also states 25th April, 2025. Time unknown.",
+      "period_end": "2025-03-31",
+      "event_date": null,
+      "extraction_status": "extracted"
+    },
+    {
+      "document_id": 6,
+      "ticker": "RELIANCE",
+      "kind": "earnings_transcript",
+      "title": "Reliance Q4 FY2025 media and analyst call transcript",
+      "requested_url": "https://www.ril.com/sites/default/files/2025-04/Q4_FY2024_25_Transcript.pdf",
+      "final_url": "https://www.ril.com/sites/default/files/2025-04/Q4_FY2024_25_Transcript.pdf",
+      "sha256": "54314a6a94c43248864f6a664700b0acec090cf7f5df88f6a52f26788520bb20",
+      "fetched_at": "2026-11-15T19:38:43.597644+00:00",
+      "pages": 42,
+      "publication_date": null,
+      "date_basis": "Publication date unknown; not inferred from the reporting period or HTTP headers.",
+      "period_end": "2025-03-31",
+      "event_date": "2025-04-25",
+      "extraction_status": "extracted"
+    },
+    {
+      "document_id": 7,
+      "ticker": "RELIANCE",
+      "kind": "exchange_filing",
+      "title": "Media Release - Reliance Industries Limited signs a Joint Operating Agreement with Oil and Natural Gas Corporation Limited and BP Exploration (ALPHA) Limited for Block GS-OSHP-2022/2",
+      "requested_url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-07/SE_29072025.pdf",
+      "final_url": "https://www.ril.com/sites/default/files/2025-07/SE_29072025.pdf",
+      "sha256": "0b4414cf85507ef2196fab011b37d2f25552041e510438049a2ca18163351dd7",
+      "fetched_at": "2026-11-15T19:34:08.582427+00:00",
+      "pages": 2,
+      "publication_date": "2025-07-29",
+      "date_basis": "Issuer corporate-announcements archive lists Jul 29, 2025; the signed disclosure is dated July 29, 2025. Exchange dissemination time unknown.",
+      "period_end": null,
+      "event_date": "2025-07-29",
+      "extraction_status": "extracted"
+    }
+  ],
+  "counts": {
+    "prices": 1872,
+    "documents": 7,
+    "filings": 1,
+    "research_chunks": 1167,
+    "synthetic_contacts": 10,
+    "relationship_edges": 10,
+    "education_records": 10
+  }
+}

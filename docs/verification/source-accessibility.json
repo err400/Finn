@@ -1,0 +1,263 @@
+[
+  {
+    "requested_url": "https://www.nseindia.in/static/rss-feed",
+    "checked_at": "2026-11-15T19:33:00.638497+00:00",
+    "status": 200,
+    "final_url": "https://www.nseindia.in/static/rss-feed",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 325835,
+    "local_file": "docs/source-probes/20.bin"
+  },
+  {
+    "requested_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/ar/annual-report-2024-2025.pdf",
+    "checked_at": "2026-11-15T19:33:02.568051+00:00",
+    "status": 200,
+    "final_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/ar/annual-report-2024-2025.pdf",
+    "content_type": "application/pdf",
+    "bytes": 23905717,
+    "local_file": "docs/source-probes/21.bin"
+  },
+  {
+    "requested_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/q4/Management%20Commentary/Transcript%20of%20the%20Q4%202024-25%20Earnings%20Conference%20Call%20held%20at%201900%20hrs%20IST%20on%20Apr%2010%2C%202025.pdf",
+    "checked_at": "2026-11-15T19:33:05.551361+00:00",
+    "status": 200,
+    "final_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/q4/Management%20Commentary/Transcript%20of%20the%20Q4%202024-25%20Earnings%20Conference%20Call%20held%20at%201900%20hrs%20IST%20on%20Apr%2010%2C%202025.pdf",
+    "content_type": "application/pdf",
+    "bytes": 290981,
+    "local_file": "docs/source-probes/22.bin"
+  },
+  {
+    "requested_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "checked_at": "2026-11-15T19:33:07.997220+00:00",
+    "status": 200,
+    "final_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 127943,
+    "local_file": "docs/source-probes/23.bin"
+  },
+  {
+    "requested_url": "https://www.infosys.com/investors/documents/exchange-filings/2025/financial-results-q3.pdf",
+    "checked_at": "2026-11-15T19:33:09.815006+00:00",
+    "error": "timed out"
+  },
+  {
+    "requested_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2124f834-2285-4a0a-8a01-7cc9ef541adb.pdf",
+    "checked_at": "2026-11-15T19:33:26.371013+00:00",
+    "status": 200,
+    "final_url": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2124f834-2285-4a0a-8a01-7cc9ef541adb.pdf",
+    "content_type": "application/pdf",
+    "bytes": 4114976,
+    "local_file": "docs/source-probes/25.bin"
+  },
+  {
+    "requested_url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?range=1mo&interval=1d",
+    "checked_at": "2026-11-15T19:31:16.473883+00:00",
+    "status": 200,
+    "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?range=1mo&interval=1d",
+    "content_type": "application/json;charset=utf-8",
+    "bytes": 3172,
+    "local_file": "docs/source-probes/00.txt",
+    "json_keys": [
+      "chart"
+    ]
+  },
+  {
+    "requested_url": "https://www.nseindia.com/static/nse-terms-of-use",
+    "checked_at": "2026-11-15T19:31:18.362155+00:00",
+    "status": 200,
+    "final_url": "https://www.nseindia.in/static/nse-terms-of-use",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 331465,
+    "local_file": "docs/source-probes/01.txt"
+  },
+  {
+    "requested_url": "https://www.bseindia.com/robots.txt",
+    "checked_at": "2026-11-15T19:31:20.365853+00:00",
+    "status": 200,
+    "final_url": "https://www.bseindia.com/robots.txt",
+    "content_type": "text/html",
+    "bytes": 16912,
+    "local_file": "docs/source-probes/02.txt"
+  },
+  {
+    "requested_url": "https://www.bseindia.com/static/about/termsofuse.aspx",
+    "checked_at": "2026-11-15T19:31:21.988373+00:00",
+    "status": 200,
+    "final_url": "https://www.bseindia.com/static/about/termsofuse",
+    "content_type": "text/html",
+    "bytes": 16912,
+    "local_file": "docs/source-probes/03.txt"
+  },
+  {
+    "requested_url": "https://www.bseindia.com/data/xml/announcements.xml",
+    "checked_at": "2026-11-15T19:31:24.027298+00:00",
+    "status": 200,
+    "final_url": "https://www.bseindia.com/data/xml/announcements.xml",
+    "content_type": "application/rss+xml",
+    "bytes": 926,
+    "local_file": "docs/source-probes/04.txt"
+  },
+  {
+    "requested_url": "https://www.infosys.com/robots.txt",
+    "checked_at": "2026-11-15T19:31:25.586757+00:00",
+    "error": "timed out"
+  },
+  {
+    "requested_url": "https://www.infosys.com/investors/reports-filings/quarterly-results/2024-2025/q3.html",
+    "checked_at": "2026-11-15T19:31:57.235961+00:00",
+    "error": "timed out"
+  },
+  {
+    "requested_url": "https://www.infosys.com/investors/reports-filings/annual-report/annual/documents/infosys-ar-25.pdf",
+    "checked_at": "2026-11-15T19:32:28.835729+00:00",
+    "error": "timed out"
+  },
+  {
+    "requested_url": "https://www.tcs.com/robots.txt",
+    "checked_at": "2026-11-15T19:33:00.396536+00:00",
+    "status": 200,
+    "final_url": "https://www.tcs.com/robots.txt",
+    "content_type": "text/plain; charset=UTF-8",
+    "bytes": 1994,
+    "local_file": "docs/source-probes/08.txt"
+  },
+  {
+    "requested_url": "https://www.tcs.com/who-we-are/investor-relations",
+    "checked_at": "2026-11-15T19:33:02.033315+00:00",
+    "status": 404,
+    "final_url": "https://www.tcs.com/who-we-are/investor-relations",
+    "content_type": "text/html;charset=utf-8",
+    "bytes": 302651,
+    "local_file": "docs/source-probes/09.txt"
+  },
+  {
+    "requested_url": "https://www.ril.com/robots.txt",
+    "checked_at": "2026-11-15T19:33:05.837375+00:00",
+    "status": 200,
+    "final_url": "https://www.ril.com/robots.txt",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 246,
+    "local_file": "docs/source-probes/10.txt"
+  },
+  {
+    "requested_url": "https://www.ril.com/investors/financial-reporting",
+    "checked_at": "2026-11-15T19:33:07.479740+00:00",
+    "status": 200,
+    "final_url": "https://www.ril.com/investors/financial-reporting",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 375156,
+    "local_file": "docs/source-probes/11.txt"
+  },
+  {
+    "requested_url": "https://www.tcs.com/who-we-are/legal/legal-disclaimer",
+    "final_url": "https://www.tcs.com/who-we-are/legal/legal-disclaimer",
+    "status": 200,
+    "completed_at": "2026-11-15T19:41:02.014437+00:00",
+    "content_type": "text/html; charset=UTF-8",
+    "local_file": "docs/source-probes/45.bin"
+  },
+  {
+    "requested_url": "https://www.ril.com/sites/default/files/2025-04/Q4_FY2024_25_Transcript.pdf",
+    "checked_at": "2026-11-15T19:38:43.376800+00:00",
+    "completed_at": "2026-11-15T19:38:43.597644+00:00",
+    "status": 200,
+    "final_url": "https://www.ril.com/sites/default/files/2025-04/Q4_FY2024_25_Transcript.pdf",
+    "content_type": "application/pdf",
+    "bytes": 387621,
+    "local_file": "docs/source-probes/40.bin"
+  },
+  {
+    "requested_url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf",
+    "checked_at": "2026-11-15T19:38:45.618854+00:00",
+    "completed_at": "2026-11-15T19:38:46.444820+00:00",
+    "status": 200,
+    "final_url": "https://www.ril.com/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf",
+    "content_type": "application/pdf",
+    "bytes": 11762229,
+    "local_file": "docs/source-probes/41.bin"
+  },
+  {
+    "requested_url": "https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2024-25/SE-Letter-CS.pdf",
+    "checked_at": "2026-11-15T19:38:48.450174+00:00",
+    "completed_at": "2026-11-15T19:38:50.207881+00:00",
+    "status": 200,
+    "final_url": "https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2024-25/SE-Letter-CS.pdf",
+    "content_type": "application/pdf",
+    "bytes": 347018,
+    "local_file": "docs/source-probes/42.bin"
+  },
+  {
+    "requested_url": "https://www.tcs.com/who-we-are/legal/tcs-com-terms-of-use",
+    "checked_at": "2026-11-15T19:38:52.213188+00:00",
+    "completed_at": "2026-11-15T19:38:55.113026+00:00",
+    "status": 404,
+    "final_url": "https://www.tcs.com/who-we-are/legal/tcs-com-terms-of-use",
+    "content_type": "text/html;charset=utf-8",
+    "bytes": 302651,
+    "local_file": "docs/source-probes/43.bin"
+  },
+  {
+    "requested_url": "https://www.ril.com/legal-notice",
+    "checked_at": "2026-11-15T19:38:57.118131+00:00",
+    "completed_at": "2026-11-15T19:38:57.172362+00:00",
+    "status": 200,
+    "final_url": "https://www.ril.com/legal-notice",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 99500,
+    "local_file": "docs/source-probes/44.bin"
+  },
+  {
+    "requested_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+    "checked_at": "2026-11-15T19:34:01.744993+00:00",
+    "status": 200,
+    "final_url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+    "content_type": "application/xml",
+    "bytes": 2478,
+    "local_file": "docs/source-probes/30.bin"
+  },
+  {
+    "requested_url": "https://www.tcs.com/investor-relations",
+    "checked_at": "2026-11-15T19:34:03.373864+00:00",
+    "status": 200,
+    "final_url": "https://www.tcs.com/investor-relations",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 438064,
+    "local_file": "docs/source-probes/31.bin"
+  },
+  {
+    "requested_url": "https://www.tcs.com/investor-relations/financial-statements",
+    "checked_at": "2026-11-15T19:34:05.049544+00:00",
+    "status": 200,
+    "final_url": "https://www.tcs.com/investor-relations/financial-statements",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 341196,
+    "local_file": "docs/source-probes/32.bin"
+  },
+  {
+    "requested_url": "https://www.ril.com/investors/events-presentations",
+    "checked_at": "2026-11-15T19:34:06.583179+00:00",
+    "status": 200,
+    "final_url": "https://www.ril.com/investors/events-presentations",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 319386,
+    "local_file": "docs/source-probes/33.bin"
+  },
+  {
+    "requested_url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-07/SE_29072025.pdf",
+    "checked_at": "2026-11-15T19:34:08.232367+00:00",
+    "status": 200,
+    "final_url": "https://www.ril.com/sites/default/files/2025-07/SE_29072025.pdf",
+    "content_type": "application/pdf",
+    "bytes": 557758,
+    "local_file": "docs/source-probes/34.bin"
+  },
+  {
+    "requested_url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf",
+    "checked_at": "2026-11-15T19:34:10.088153+00:00",
+    "status": 200,
+    "final_url": "https://www.ril.com/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf",
+    "content_type": "application/pdf",
+    "bytes": 1719021,
+    "local_file": "docs/source-probes/35.bin"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "frontend_http": 200,
+  "portfolio": {
+    "companies": 18,
+    "sectors": 15,
+    "price_coverage": 18,
+    "primary_source_coverage": 2,
+    "latest_trade_date": "2026-11-13",
+    "oldest_trade_date": "2026-11-13"
+  },
+  "event": {
+    "id": 1,
+    "source": "https://www.ril.com/sites/default/files/2025-07/SE_29072025.pdf#page=1",
+    "network_person": "Priya Demo Menon",
+    "degree": 2
+  },
+  "company_documents": 4,
+  "alert": {
+    "triggering_value": "11.5976",
+    "threshold": "3",
+    "observed_date": "2026-11-02",
+    "source": "https://query1.finance.yahoo.com/v8/finance/chart/RELIANCE.NS?events=history&interval=1d&period1=1784399400&period2=1794767400"
+  },
+  "rule_saved_and_paused": true,
+  "research": {
+    "status": "completed",
+    "cache_hit": true,
+    "claims": 6,
+    "evidence_passages": 10,
+    "calculated_metrics": 4,
+    "source_period_end": "2025-03-31"
+  },
+  "browser_cors_patch": true,
+  "visual_qa": "Desktop user screenshots inspected; direct browser automation denied by computer-use permissions. Mobile/desktop navigation is tested in jsdom, not a browser layout engine."
+}

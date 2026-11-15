@@ -1,0 +1,29 @@
+{
+  "request_status": "recently_checked",
+  "coordinator": {
+    "status": "idle",
+    "started_at": null,
+    "completed_at": null,
+    "message": "No refresh requested in this process.",
+    "automatic_refresh": true,
+    "interval_seconds": 300
+  },
+  "source_checks": [
+    {
+      "url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml",
+      "last_checked_at": "2026-11-15T20:57:28.688430+00:00",
+      "expires_at": "2026-11-15T21:02:28.688441+00:00",
+      "last_error": null,
+      "overdue": false
+    },
+    {
+      "url": "https://www.bseindia.com/data/xml/announcements.xml",
+      "last_checked_at": "2026-11-15T20:57:28.868498+00:00",
+      "expires_at": "2026-11-15T21:02:28.868505+00:00",
+      "last_error": null,
+      "overdue": false
+    }
+  ],
+  "matching_stored_portfolio_filings": 0,
+  "coverage": "All stored matching portfolio disclosures are considered. Public RSS windows are incomplete; no matches does not mean no announcements."
+}

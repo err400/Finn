@@ -1,0 +1,95 @@
+[
+  {
+    "id": 19,
+    "ticker": "TCS",
+    "dataset": "documents",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:49:19.220674+00:00",
+    "completed_at": "2026-11-15 19:49:47.291519+00:00",
+    "details": {
+      "documents": [
+        {
+          "id": 1,
+          "kind": "annual_report",
+          "sha256": "62ace414871697ed4c7ef34fd235fc3c89ed6208a30afe5ff2e49b5260fd8a57",
+          "source_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/ar/annual-report-2024-2025.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 2,
+          "kind": "earnings_transcript",
+          "sha256": "452d227dc14428e12164bc9935f240bf613d2412ee21cd388213d57c6365d2a6",
+          "source_url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/q4/Management%20Commentary/Transcript%20of%20the%20Q4%202024-25%20Earnings%20Conference%20Call%20held%20at%201900%20hrs%20IST%20on%20Apr%2010,%202025.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 3,
+          "kind": "exchange_filing",
+          "sha256": "591c43c1a3894c158658082972a050b852b2c873c484a39659173b853c449780",
+          "source_url": "https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2024-25/SE-Letter-CS.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        }
+      ],
+      "errors": [],
+      "discovery": "reviewed exact issuer URLs; not exhaustive coverage"
+    }
+  },
+  {
+    "id": 20,
+    "ticker": "RELIANCE",
+    "dataset": "documents",
+    "mode": "live",
+    "status": "success",
+    "started_at": "2026-11-15 19:49:47.293091+00:00",
+    "completed_at": "2026-11-15 19:50:05.178619+00:00",
+    "details": {
+      "documents": [
+        {
+          "id": 4,
+          "kind": "annual_report",
+          "sha256": "bb541a68a0440fd4e27527afbb79f9a0e7584ae430fe9af244700709cacc0769",
+          "source_url": "https://www.ril.com/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 5,
+          "kind": "quarterly_results",
+          "sha256": "0ec375dcbc69b69a95cd13f37fe090d61071d6e6a66707f2c73b26b77c6bd0d0",
+          "source_url": "https://www.ril.com/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 6,
+          "kind": "earnings_transcript",
+          "sha256": "54314a6a94c43248864f6a664700b0acec090cf7f5df88f6a52f26788520bb20",
+          "source_url": "https://www.ril.com/sites/default/files/2025-04/Q4_FY2024_25_Transcript.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        },
+        {
+          "id": 7,
+          "kind": "exchange_filing",
+          "sha256": "0b4414cf85507ef2196fab011b37d2f25552041e510438049a2ca18163351dd7",
+          "source_url": "https://www.ril.com/sites/default/files/2025-07/SE_29072025.pdf",
+          "cache_status": "cache",
+          "warning": null,
+          "extraction_status": "extracted"
+        }
+      ],
+      "errors": [],
+      "discovery": "reviewed exact issuer URLs; not exhaustive coverage"
+    }
+  }
+]

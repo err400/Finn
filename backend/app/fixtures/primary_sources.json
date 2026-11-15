@@ -1,0 +1,443 @@
+[
+  {
+    "ticker": "TCS",
+    "title": "TCS Integrated Annual Report 2024-25",
+    "kind": "annual_report",
+    "url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/ar/annual-report-2024-2025.pdf",
+    "discovery_url": "https://www.tcs.com/investor-relations",
+    "publisher": "Tata Consultancy Services",
+    "period_end": "2025-03-31",
+    "expected_text": [
+      "Tata Consultancy Services",
+      "2024-25"
+    ]
+  },
+  {
+    "ticker": "TCS",
+    "title": "TCS Q4 FY2025 earnings conference call transcript",
+    "kind": "earnings_transcript",
+    "url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/q4/Management%20Commentary/Transcript%20of%20the%20Q4%202024-25%20Earnings%20Conference%20Call%20held%20at%201900%20hrs%20IST%20on%20Apr%2010%2C%202025.pdf",
+    "discovery_url": "https://www.tcs.com/investor-relations/financial-statements",
+    "publisher": "Tata Consultancy Services",
+    "event_date": "2025-04-10",
+    "period_end": "2025-03-31",
+    "expected_text": [
+      "Tata Consultancy Services",
+      "April 10, 2025"
+    ]
+  },
+  {
+    "ticker": "TCS",
+    "title": "TCS exchange disclosure: appointment of Company Secretary and Compliance Officer",
+    "kind": "exchange_filing",
+    "url": "https://www.tcs.com/content/dam/tcs/pdf/discover-tcs/investor-relations/corporate-actions/2024-25/SE-Letter-CS.pdf",
+    "discovery_url": "https://www.tcs.com/investor-relations",
+    "publisher": "Tata Consultancy Services",
+    "event_date": "2024-07-11",
+    "expected_text": [
+      "532540",
+      "July 11, 2024"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Reliance Integrated Annual Report 2024-25",
+    "kind": "annual_report",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-08/RIL-Integrated-Annual-Report-2024-25.pdf",
+    "discovery_url": "https://www.ril.com/investors/financial-reporting",
+    "publisher": "Reliance Industries",
+    "period_end": "2025-03-31",
+    "expected_text": [
+      "Reliance Industries",
+      "2024-25"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Reliance consolidated results for quarter/year ended March 31, 2025",
+    "kind": "quarterly_results",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-04/25042025_Media_Release_RIL_Q4_FY2024_25_Financial_and_Operational_Performance.pdf",
+    "discovery_url": "https://www.ril.com/investors/financial-reporting",
+    "publisher": "Reliance Industries",
+    "period_end": "2025-03-31",
+    "published_date": "2025-04-25",
+    "date_basis": "Issuer financial-reporting index lists Apr 25, 2025; the PDF cover also states 25th April, 2025. Time unknown.",
+    "expected_text": [
+      "Reliance Industries",
+      "31ST MARCH, 2025"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Reliance Q4 FY2025 media and analyst call transcript",
+    "kind": "earnings_transcript",
+    "url": "https://www.ril.com/sites/default/files/2025-04/Q4_FY2024_25_Transcript.pdf",
+    "discovery_url": "https://www.ril.com/investors/events-presentations",
+    "publisher": "Reliance Industries",
+    "period_end": "2025-03-31",
+    "event_date": "2025-04-25",
+    "expected_text": [
+      "Reliance Industries",
+      "25 April 2025"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Media Release - Reliance Industries Limited signs a Joint Operating Agreement with Oil and Natural Gas Corporation Limited and BP Exploration (ALPHA) Limited for Block GS-OSHP-2022/2",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-07/SE_29072025.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "publisher": "Reliance Industries",
+    "published_date": "2025-07-29",
+    "date_basis": "Issuer corporate-announcements archive lists Jul 29, 2025; the signed disclosure is dated July 29, 2025. Exchange dissemination time unknown.",
+    "event_date": "2025-07-29",
+    "replay_announcement": true,
+    "expected_text": [
+      "500325",
+      "Trading Symbol: RELIANCE",
+      "July 29, 2025"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 \u2013 Voluntary winding up of Reliance TerraTech Holdings LLC",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-08/SE_20082025.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "publisher": "Reliance Industries",
+    "published_date": "2025-08-20",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 \u2013 Voluntary winding up of Reliance NeuComm LLC",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-08/SE_19082025.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "publisher": "Reliance Industries",
+    "published_date": "2025-08-19",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Media Release - \u201cRELIANCE CONSUMER PRODUCTS FORAYS INTO HEALTHY FUNCTIONAL BEVERAGES.\u201d",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-08/SE_18082025.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "publisher": "Reliance Industries",
+    "published_date": "2025-08-18",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Update on Institutional Investors\u2019 Meeting \u2013 Emkay Confluence 2025",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-08/SE_12082025.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "publisher": "Reliance Industries",
+    "published_date": "2025-08-12",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Prior Intimation of Analyst Meet - Emkay Confluence 2025",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-08/SE_07082025.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "publisher": "Reliance Industries",
+    "published_date": "2025-08-07",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "\u201cAnnual General Meeting\u201d of the members of the Company and \u201cRecord Date\u201d",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-08/SE_31072025.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "publisher": "Reliance Industries",
+    "published_date": "2025-07-31",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Disclosure of Voting Results - Postal Ballot Notice dated June 28, 2025",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2025-07/SE_Voting_Results.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements?page=17",
+    "publisher": "Reliance Industries",
+    "published_date": "2025-07-30",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Prior Intimation of Analyst Meet - Morgan Stanley 25th Annual Asia-Pacific Summit",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-11/SE_13112026.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-11-13",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Prior Intimation of Analyst Meet \u2013 JM Financial India Conference",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-11/SE-12112026.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-11-12",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Prior Intimation of Analyst Meet \u2013 CLSA India Forum",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-11/Pre_CLSA_SE_06112026.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-11-06",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Transcript of the discussion on the Unaudited Financial Results (Consolidated and Standalone) of the Company for the quarter and half year ended September 30, 2026",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-11/SE_01112026.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-11-01",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Audio recording of the discussion on the Unaudited Financial Results (Consolidated and Standalone) of the Company for the quarter and half year ended September 30, 2026",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-11/SE_31102026_AR.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-10-31",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Presentation on the Unaudited Financial Results (Consolidated and Standalone) for the quarter and half year ended September 30, 2026",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-10/SE_30102026_IP.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-10-30",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Media Release - Consolidated and Standalone Unaudited Financial Results for the quarter and half year ended September 30, 2026",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-10/SE_30102026_MR.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-10-30",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Consolidated and Standalone Financial Results for the quarter and half year ended September 30, 2026",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-10/SE_30102026_Results.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-10-30",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Disclosure under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 \u2013 Voluntary strike off of Hamleys (Franchising) Limited",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-10/SE_29102926.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-10-29",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "RELIANCE",
+    "title": "Listing of Equity Shares of Jio Platforms Limited",
+    "kind": "exchange_filing",
+    "url": "https://rilstaticasset.akamaized.net/sites/default/files/2026-10/RIL_SE_271026.pdf",
+    "discovery_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
+    "publisher": "Reliance Industries",
+    "published_date": "2026-10-27",
+    "date_basis": "Date explicitly listed by issuer corporate-announcements archive; publication time unknown.",
+    "replay_announcement": true,
+    "expected_text": [
+      "RELIANCE"
+    ]
+  },
+  {
+    "ticker": "PIDILITIND",
+    "title": "SE Intimation - Transcript of Earnings Call - Q2FY2027",
+    "kind": "earnings_transcript",
+    "url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-transcript-of-earnings-call-q2fy2027.pdf",
+    "discovery_url": "https://www.pidilite.com/investor-relations/listing-information",
+    "publisher": "Pidilite Industries",
+    "expected_text": [
+      "Pidilite"
+    ],
+    "period_end": "2026-09-30"
+  },
+  {
+    "ticker": "PIDILITIND",
+    "title": "SE Intimation - Unaudited Financial Results - 30.09.2026",
+    "kind": "quarterly_results",
+    "url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-unaudited-financial-results-30-09-2026.pdf",
+    "discovery_url": "https://www.pidilite.com/investor-relations/listing-information",
+    "publisher": "Pidilite Industries",
+    "expected_text": [
+      "Pidilite"
+    ],
+    "period_end": "2026-09-30"
+  },
+  {
+    "ticker": "PIDILITIND",
+    "title": "SE Intimation - Appointment of SMP - Mr. Huzefa Kanchwala and Mr. Manish Airee - 27.10.2026",
+    "kind": "exchange_filing",
+    "url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-appointment-of-smp-mr-huzefa-kanchwala-and-mr-manish-airee-27-10-2026.pdf",
+    "discovery_url": "https://www.pidilite.com/investor-relations/listing-information",
+    "publisher": "Pidilite Industries",
+    "expected_text": [
+      "Pidilite"
+    ],
+    "published_date": "2026-10-27",
+    "date_basis": "Dated stock-exchange disclosure explicitly labeled in issuer listing-information index; dissemination time unknown.",
+    "replay_announcement": true
+  },
+  {
+    "ticker": "PIDILITIND",
+    "title": "SE Intimation - Finemake - Transfer of Shares to Founders - 29.09.2026",
+    "kind": "exchange_filing",
+    "url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-finemake-transfer-of-shares-to-founders-29-09-2026.pdf",
+    "discovery_url": "https://www.pidilite.com/investor-relations/listing-information",
+    "publisher": "Pidilite Industries",
+    "expected_text": [
+      "Pidilite"
+    ],
+    "published_date": "2026-09-29",
+    "date_basis": "Dated stock-exchange disclosure explicitly labeled in issuer listing-information index; dissemination time unknown.",
+    "replay_announcement": true
+  },
+  {
+    "ticker": "PIDILITIND",
+    "title": "SE intimation - Appointment of Mrs. Ami Parikh and Mr. Rajesh Joshi as SMP - 02.02.2026",
+    "kind": "exchange_filing",
+    "url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2025-26/se-intimation-appointment-of-mrs-ami-parikh-and-mr-rajesh-joshi-as-smp-02-02-2026.pdf",
+    "discovery_url": "https://www.pidilite.com/investor-relations/listing-information",
+    "publisher": "Pidilite Industries",
+    "expected_text": [
+      "Pidilite"
+    ],
+    "published_date": "2026-02-02",
+    "date_basis": "Dated stock-exchange disclosure explicitly labeled in issuer listing-information index; dissemination time unknown.",
+    "replay_announcement": true
+  },
+  {
+    "ticker": "PIDILITIND",
+    "title": "SE Intimation-Appointment of SMP-01.04.2025",
+    "kind": "exchange_filing",
+    "url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2025-26/se-intimation-appointment-of-smp-01.04.2025.pdf",
+    "discovery_url": "https://www.pidilite.com/investor-relations/listing-information",
+    "publisher": "Pidilite Industries",
+    "expected_text": [
+      "Pidilite"
+    ],
+    "published_date": "2025-04-01",
+    "date_basis": "Dated stock-exchange disclosure explicitly labeled in issuer listing-information index; dissemination time unknown.",
+    "replay_announcement": true
+  },
+  {
+    "ticker": "PIDILITIND",
+    "title": "S E Intimation-Transcript of Earnings Call-Q2FY26",
+    "kind": "earnings_transcript",
+    "url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/analyst-meet/fy-2025-26/se-intimation-transcript-of-earnings-call-q2fy26.pdf",
+    "discovery_url": "https://www.pidilite.com/investor-relations/listing-information",
+    "publisher": "Pidilite Industries",
+    "expected_text": [
+      "Pidilite"
+    ],
+    "period_end": "2025-09-30"
+  },
+  {
+    "ticker": "PIDILITIND",
+    "title": "Pidilite Annual Report 2024-25",
+    "kind": "annual_report",
+    "url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/financial/annual-reports/annual-report-2024-25.pdf",
+    "discovery_url": "https://www.pidilite.com/investor-relations/financials/annual-reports",
+    "publisher": "Pidilite Industries",
+    "period_end": "2025-03-31",
+    "expected_text": [
+      "Pidilite"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "prices": 1872,
+  "documents": 32,
+  "filings": 22,
+  "documents_by_company": [
+    [
+      "PIDILITIND",
+      8,
+      222
+    ],
+    [
+      "RELIANCE",
+      21,
+      409
+    ],
+    [
+      "TCS",
+      3,
+      363
+    ]
+  ],
+  "filings_by_company": [
+    [
+      "PIDILITIND",
+      4
+    ],
+    [
+      "RELIANCE",
+      18
+    ]
+  ]
+}

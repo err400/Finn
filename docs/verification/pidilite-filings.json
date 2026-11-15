@@ -1,0 +1,43 @@
+[
+  {
+    "id": 152,
+    "ticker": "PIDILITIND",
+    "dataset": "filings",
+    "mode": "replay",
+    "status": "success",
+    "started_at": "2026-11-15 21:19:27.462122+00:00",
+    "completed_at": "2026-11-15 21:19:27.491523+00:00",
+    "details": {
+      "mode": "replay",
+      "label": "Historical replay \u2014 genuinely retrieved issuer-hosted exchange disclosures; original publication dates retained.",
+      "items": [
+        {
+          "document_id": 27,
+          "inserted_origin": true,
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-appointment-of-smp-mr-huzefa-kanchwala-and-mr-manish-airee-27-10-2026.pdf",
+          "cache_status": "cache"
+        },
+        {
+          "document_id": 28,
+          "inserted_origin": true,
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2026-27/se-intimation-finemake-transfer-of-shares-to-founders-29-09-2026.pdf",
+          "cache_status": "cache"
+        },
+        {
+          "document_id": 29,
+          "inserted_origin": true,
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2025-26/se-intimation-appointment-of-mrs-ami-parikh-and-mr-rajesh-joshi-as-smp-02-02-2026.pdf",
+          "cache_status": "cache"
+        },
+        {
+          "document_id": 30,
+          "inserted_origin": true,
+          "source_url": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/listing-information/stock-exchange-announcements/intimation-and-updates/fy-2025-26/se-intimation-appointment-of-smp-01.04.2025.pdf",
+          "cache_status": "cache"
+        }
+      ],
+      "errors": [],
+      "coverage": "Selected historical records only; not a live feed or complete archive."
+    }
+  }
+]
