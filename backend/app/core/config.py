@@ -33,6 +33,33 @@ class Settings(BaseSettings):
         # the same synthetic demo without requiring another dashboard change.
         return 'public_demo' if value == 'reviewer' else value
 
+    @field_validator('database_url', mode='before')
+    @classmethod
+    def normalize_database_uri(cls, value):
+        if not isinstance(value, str):
+            raise ValueError('Database connection must be a URI')
+        value = value.strip()
+        if len(value)>1 and value[0] == value[-1] and value[0] in {'"', "'"}:
+            value = value[1:-1].strip()
+        for prefix in ('postgresql://', 'postgres://'):
+            if value.startswith(prefix):
+                value = 'postgresql+psycopg://' + value[len(prefix):]
+                break
+        if value.startswith('postgresql+psycopg://'):
+            from sqlalchemy.engine import make_url
+            try:
+                url = make_url(value)
+                if not url.host or not url.username:
+                    raise ValueError()
+            except Exception:
+                raise ValueError('Invalid Postgres URI; copy the Session-pooler URI from Supabase Connect') from None
+            if url.password and 'YOUR-PASSWORD' in url.password.upper():
+                raise ValueError('Replace the database password placeholder privately in Render before deploying')
+            if url.host.endswith('.supabase.co') or url.host.endswith('.pooler.supabase.com'):
+                url = url.update_query_dict({'sslmode': 'require'})
+            value = url.render_as_string(hide_password=False)
+        return value
+
     @model_validator(mode='after')
     def deployment_boundary(self):
         if self.access_mode == 'public_demo':

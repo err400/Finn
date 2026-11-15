@@ -229,3 +229,21 @@ def test_snapshot_refresh_does_not_fetch_sources(monkeypatch):
         manager=SourceRefreshManager(forbidden)
         assert (await manager.request())['status']=='snapshot' and manager.task is None
     asyncio.run(scenario())
+
+
+@pytest.mark.parametrize('prefix',['postgresql://','postgres://','postgresql+psycopg://'])
+def test_supabase_database_uri_accepts_dashboard_formats_without_secret_output(prefix):
+    from sqlalchemy.engine import make_url
+    raw=prefix+'postgres.synthetic:synthetic%40password@aws-0-region.pooler.supabase.com:5432/postgres'
+    cfg=Settings(_env_file=None,database_url=' "'+raw+'" ')
+    uri=make_url(cfg.database_url)
+    assert uri.drivername=='postgresql+psycopg' and uri.password=='synthetic@password'
+    assert uri.query['sslmode']=='require'
+    assert 'synthetic@password' not in repr(cfg) and 'synthetic%40password' not in repr(cfg)
+
+
+def test_database_placeholder_rejected_without_printing_connection_details():
+    with pytest.raises(ValueError) as caught:
+        Settings(_env_file=None,database_url='postgresql://postgres.test:[YOUR-PASSWORD]@private-host.supabase.co:5432/postgres')
+    assert 'Replace the database password placeholder' in str(caught.value)
+    assert 'private-host' not in str(caught.value)

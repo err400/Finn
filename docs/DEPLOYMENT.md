@@ -27,7 +27,7 @@ The frontend and synthetic demo workspace open without a login. Visitors share d
 1. Create a **Free** project at https://supabase.com/dashboard. Save its database password privately.
 2. Create a Storage bucket named **`finn-private`**. Keep **Public bucket OFF**. Allow at least the prototype's 50 MiB bounded source download size if your plan permits. Add no anonymous read/write policies.
 3. From **Connect**, select the **Session pooler**, port **5432**, which supports IPv4. Do not use the IPv6-only direct endpoint or transaction pooler for this deployment. [Connection guide](https://supabase.com/docs/guides/database/connecting-to-postgres).
-4. Backend URL format: `postgresql+psycopg://USER:URL_ENCODED_PASSWORD@SESSION_POOLER:5432/postgres?sslmode=require`. Use the actual supplied username/host. URL-encode reserved password characters. This URL is a secret.
+4. Backend URL format: `postgresql+psycopg://USER:URL_ENCODED_PASSWORD@SESSION_POOLER:5432/postgres?sslmode=require`. Use the actual supplied username/host. Standard `postgresql://` and `postgres://` prefixes are also accepted and normalized to the psycopg driver automatically. URL-encode reserved password characters. This URL is a secret.
 5. Get the project URL `https://PROJECT.supabase.co` and **server-only legacy `service_role` key** from project API settings. The storage adapter sends it only from FastAPI; never use it in Vercel/browser code.
 6. Keep the Supabase Data API disabled if you do not need it. FINN uses SQL connections and the private Storage API. On initialization FINN enables RLS and revokes PUBLIC/`anon`/`authenticated` access on its own tables and sequences. The server database owner can operate those tables. There are no public storage policies.
 
