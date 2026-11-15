@@ -1,4 +1,4 @@
-"""Verify local or deployed frontend/API/CORS. Reviewer code is read from process env only."""
+"""Verify local or deployed frontend/API/CORS. Public synthetic demo; no reviewer code required."""
 import argparse
 import json
 import os
@@ -12,7 +12,6 @@ parser.add_argument('--research',action='store_true',help='Make one synthesis re
 parser.add_argument('--report',type=Path,default=Path('../docs/verification/deployment-smoke.json'))
 args=parser.parse_args();front=args.frontend.rstrip('/');api=args.backend.rstrip('/')+'/api/v1'
 headers={}
-if os.environ.get('FINN_REVIEWER_TOKEN'):headers['Authorization']='Bearer '+os.environ['FINN_REVIEWER_TOKEN']
 report={'frontend':front,'backend':args.backend,'hosted':not args.backend.startswith('http://127.0.0.1')}
 with httpx.Client(timeout=90,follow_redirects=False) as client:
     page=client.get(front);page.raise_for_status();assert '<div id="root">' in page.text

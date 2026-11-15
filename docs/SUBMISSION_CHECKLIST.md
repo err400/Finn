@@ -8,7 +8,7 @@
 - [x] Contextual direct/second-degree Network recommendations in events and research.
 - [x] Expanded genuine source coverage and actual dates/provenance; no fabricated announcements.
 - [x] SQLite local and Postgres/private-object-storage cloud adapters; local-to-cloud copy command.
-- [x] Reviewer gate, secret exclusions, source-only packaging, CI configuration.
+- [x] Public synthetic demo, secret exclusions, source-only packaging, CI configuration.
 - [x] README, architecture, deployment/environment reference, privacy, AI/cost decisions, limitations.
 - [x] Backend unit/integration regressions, actual ASGI startup, frontend tests/build, local HTTP integration.
 - [ ] Actual mobile-browser visual check at 390px plus desktop keyboard/drawer check (computer-use permission denied).
@@ -19,12 +19,12 @@
 - [ ] Create Supabase **Free** project and **private** `finn-private` bucket.
 - [ ] Privately import local data before first hosted startup, or run reviewed real-source bootstrap.
 - [ ] Render **Free** backend, one worker, Postgres + private Storage secrets only on backend.
-- [ ] Vercel Hobby/free frontend; public API base and `VITE_REVIEWER_MODE=true` only.
+- [ ] Vercel Hobby/free frontend; public API base only; no reviewer gate.
 - [ ] Exact CORS origin + real hosted smoke report, citations, protected routes, and research.
 - [ ] Restart Render and confirm saved rule IDs/source counts persist in Supabase.
 - [ ] Confirm anonymous Supabase database/bucket access denied; no service keys in frontend assets.
 - [ ] Configure inference spend cap or leave synthesis disabled with evidence-only mode.
-- [ ] Record actual live URL and reviewer access instructions privately for evaluator.
+- [ ] Record actual live URL and demo walkthrough for evaluator.
 
 ## Email deliverables
 

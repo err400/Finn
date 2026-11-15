@@ -173,3 +173,12 @@ it('requests a real source refresh rather than only rereading the digest',async(
   expect(api.requests.some(r=>r.method==='POST'&&r.url.pathname.endsWith('/push/refresh'))).toBe(true)
   expect(api.requests.filter(r=>r.url.pathname.endsWith('/push/digest')).length).toBeGreaterThanOrEqual(2)
 })
+
+it('opens the app directly even if an obsolete reviewer flag is still set in hosting',async()=>{
+  vi.stubEnv('VITE_REVIEWER_MODE','true')
+  try{
+    backend();render(<App/>)
+    expect(await screen.findByRole('heading',{name:'Find what deserves your attention.'})).toBeInTheDocument()
+    expect(screen.queryByLabelText('Reviewer access code')).not.toBeInTheDocument()
+  }finally{vi.unstubAllEnvs()}
+})

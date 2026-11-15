@@ -11,7 +11,7 @@ services:
       - key: PYTHON_VERSION
         value: 3.12.12
       - key: FINN_ACCESS_MODE
-        value: reviewer
+        value: public_demo
       - key: FINN_DATABASE_URL
         sync: false
       - key: FINN_STORAGE_BACKEND
@@ -22,8 +22,6 @@ services:
         sync: false
       - key: FINN_STORAGE_BUCKET
         value: finn-private
-      - key: FINN_REVIEWER_TOKEN
-        sync: false
       - key: FINN_CORS_ORIGINS
         value: '["https://finn-three-brown.vercel.app"]'
       - key: FINN_EPHEMERAL_STORAGE

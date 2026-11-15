@@ -11,10 +11,8 @@ export type ResearchResult = { id: number; ticker: string; workflow: string; que
 export type Position = Company & { price: { close: string; currency: string; volume: number; trading_date: string; change_percent: string | null; previous_trading_date: string | null; provider: string; source_url: string; fetched_at: string } | null; source_state: string; source_note: string; primary_document_count: number }
 export type Overview = { items: Position[]; summary: { companies: number; sectors: number; price_coverage: number; primary_source_coverage: number; latest_trade_date: string | null; oldest_trade_date: string | null }; replay_window: { start: string; end_exclusive: string } | null; generated_at: string; ownership: string }
 export type SourceDocument = { id: number; title: string; kind: string; page_count: number; extraction_status: string; published_date: string | null; period_end: string | null; date_basis: string; provenance: { source_url: string; fetched_at: string; sha256: string } }
-export type Health = { access_mode?: 'local' | 'reviewer'; ephemeral_storage?: boolean; bootstrap?: {status: string; completed_jobs: number; failed_jobs: number}; status: string; providers: { llm: { configured: boolean; model: string | null }; market: unknown; filings: unknown; fundamentals: unknown } }
+export type Health = { access_mode?: 'local' | 'public_demo'; ephemeral_storage?: boolean; bootstrap?: {status: string; completed_jobs: number; failed_jobs: number}; status: string; providers: { llm: { configured: boolean; model: string | null }; market: unknown; filings: unknown; fundamentals: unknown } }
 const base = (import.meta.env.VITE_API_BASE_URL ?? 'http://127.0.0.1:8001/api/v1').replace(/\/$/, '')
-let reviewerToken = ''
-export function setReviewerToken(token: string) { reviewerToken = token }
 export async function api<T>(path: string, init?: RequestInit): Promise<T> {
   const controller = new AbortController()
   const external = init?.signal
@@ -25,7 +23,6 @@ export async function api<T>(path: string, init?: RequestInit): Promise<T> {
   const timeout = setTimeout(() => { timedOut = true; controller.abort() }, 60000)
   try {
     const headers = new Headers(init?.headers)
-    if (reviewerToken) headers.set('Authorization', 'Bearer ' + reviewerToken)
     const response = await fetch(`${base}${path}`, { ...init, headers, signal: controller.signal })
     if (!response.ok) {
       let message = `Request failed (${response.status}). Please try again.`

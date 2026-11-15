@@ -99,6 +99,8 @@ def documents(ticker: str, kind: Literal["annual_report", "quarterly_results", "
 
 @router.get("/documents/{document_id}/pages/{page_number}")
 def page(document_id: int, page_number: int, db: Session = Depends(get_db)):
+    if get_settings().access_mode != 'local':
+        raise HTTPException(403, 'Full source-page export is disabled in the public demo; open the original citation')
     row = db.scalar(select(DocumentPage).where(DocumentPage.document_id == document_id, DocumentPage.page_number == page_number))
     if row is None: raise HTTPException(404, "Page not found or text extraction unavailable")
     doc = db.get(DocumentAsset, document_id)
@@ -107,7 +109,7 @@ def page(document_id: int, page_number: int, db: Session = Depends(get_db)):
 
 @router.get("/documents/{document_id}/file")
 def file(document_id: int, db: Session = Depends(get_db)):
-    if get_settings().access_mode == 'reviewer':
+    if get_settings().access_mode != 'local':
         raise HTTPException(403, 'Raw PDF redistribution is disabled; open the original issuer citation')
     doc = db.get(DocumentAsset, document_id)
     if doc is None: raise HTTPException(404, "Document not found")

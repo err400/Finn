@@ -44,7 +44,7 @@ npm run dev
 
 Open http://127.0.0.1:5173. API documentation: http://127.0.0.1:8001/docs.
 
-No `.env` file is required: the backend reads process environment variables directly. Start it from the terminal where the Hyde variables are exported. Optional examples: [backend](.env.example), [frontend](frontend/.env.example). Never put an inference key, database password, reviewer code, or storage credential in a `VITE_` variable.
+No `.env` file is required: the backend reads process environment variables directly. Start it from the terminal where the Hyde variables are exported. Optional examples: [backend](.env.example), [frontend](frontend/.env.example). Never put an inference key, database password, or storage credential in a `VITE_` variable.
 
 ### Populate real data
 
@@ -122,7 +122,7 @@ python3 scripts/check_release.py
 python3 scripts/package_source.py
 ```
 
-The backend suite covers unsupported tickers, missing reports, inaccessible sources, HTTP cooldowns, deduplication, empty digests, no relevant connections, owner isolation, exact citations, conflicting evidence, Decimal comparisons, invalid thresholds, failed LLM requests, private storage transport, and reviewer access. Postgres integration additionally runs when `FINN_TEST_POSTGRES_URL` names a **disposable database `finn_audit`**; it drops that test schema and verifies migration, persistence, sequences, and retrieval. Never point tests at production.
+The backend suite covers unsupported tickers, missing reports, inaccessible sources, HTTP cooldowns, deduplication, empty digests, no relevant connections, owner isolation, exact citations, conflicting evidence, Decimal comparisons, invalid thresholds, failed LLM requests, private storage transport, and public-demo access boundaries. Postgres integration additionally runs when `FINN_TEST_POSTGRES_URL` names a **disposable database `finn_audit`**; it drops that test schema and verifies migration, persistence, sequences, and retrieval. Never point tests at production.
 
 [Audit findings](docs/AUDIT.md) distinguish fixes from remaining limits. [The live smoke verifier](backend/scripts/verify_deployment.py) checks frontend delivery, API responses, CORS, event-to-person integration, and optionally a real research request. Local verification is recorded separately from hosted verification; no deployed check is claimed yet.
 
@@ -137,8 +137,8 @@ The backend suite covers unsupported tickers, missing reports, inaccessible sour
 
 ## Security and remaining work
 
-The default server is loopback-only. Hosted review requires a private runtime bearer code; it is held in browser memory, never embedded in a build or browser storage. All workspace endpoints are gated; raw PDF download is disabled in hosted reviewer mode. Supabase tables enable RLS and revoke browser-role access; the frontend never connects directly to the database or storage. Network details never enter model requests. See [security/privacy decisions](docs/SECURITY.md).
+The default local server is loopback-only. Hosted `public_demo` mode opens the synthetic workspace without a login or access code, as requested for evaluation. Legacy `reviewer` mode settings migrate to `public_demo`; old reviewer token/frontend flags are ignored and can be removed from dashboards. Visitors share demo rules and outputs, so do not import real private investor/contact data. Request budgets and single-request research concurrency remain; CORS is not authentication. Raw PDFs and full page export remain disabled remotely, and operator ingestion requires its separate private token. Supabase database/storage keys remain backend-only. See [security/privacy decisions](docs/SECURITY.md).
 
-The shared synthetic reviewer gate is **not production multi-user authentication**. Remaining work includes comprehensive licensed filings, wider numeric-layout support/OCR, real consent/import/deletion workflows, durable job queues, migration history/backups, production monitoring, and authenticated per-investor workspaces. Source availability does not confer redistribution rights; no proprietary PDFs/database are published in GitHub. Private review hosting is not a blanket content license.
+Remaining work includes comprehensive licensed filings, wider numeric-layout support/OCR, real consent/import/deletion workflows, durable queues, schema migration history/backups, production monitoring, and authenticated per-investor workspaces. No proprietary PDFs/database are published in GitHub. Public source access does not imply redistribution rights.
 
 Deployment steps: [Vercel + Render Free + Supabase](docs/DEPLOYMENT.md). Final artifacts and blockers: [submission checklist](docs/SUBMISSION_CHECKLIST.md). Repository: https://github.com/err400/Finn.

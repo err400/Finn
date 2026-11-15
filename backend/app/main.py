@@ -62,7 +62,7 @@ async def lifespan(app: FastAPI):
             pass
 
 app = FastAPI(title="FINN", version="0.1.0", lifespan=lifespan,
-              description="FINN prototype: primary financial evidence, synthetic network, deterministic PUSH and grounded PULL. Single reviewer gate; production identity is not implemented.")
+              description="FINN prototype: primary financial evidence, synthetic network, deterministic PUSH and grounded PULL. Public synthetic demo with request budgets; production identity is not implemented.")
 app.add_middleware(CORSMiddleware, allow_origins=get_settings().cors_origins, allow_credentials=False, allow_methods=["GET", "POST", "PATCH"], allow_headers=["Content-Type", "Authorization", "X-FINN-Ingest-Token"])
 
 @app.middleware('http')

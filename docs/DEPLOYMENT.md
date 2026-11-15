@@ -4,7 +4,7 @@
 
 Configuration is prepared. No hosted service has been created or verified yet. Account access, the Supabase project, and secret values are required. Never send credentials in chat or commit them to the repository.
 
-The frontend is public static code; the financial/research/network workspace is protected by a private reviewer code. This is a shared synthetic workspace for evaluation, not production investor authentication.
+The frontend and synthetic demo workspace open without a login. Visitors share demo settings. This is not production investor authentication; never import real private contact/portfolio information. Operator-only ingestion and private source storage remain protected.
 
 ## Free hosting with durable data
 
@@ -43,7 +43,7 @@ If you already started Render and it seeded the destination, do not delete table
 
 1. Sign in at https://dashboard.render.com, connect GitHub, and choose **New → Blueprint** for https://github.com/err400/Finn. Use `render.yaml`.
 2. Confirm service plan **Free**. No persistent disk or paid database should be added.
-3. Enter the environment variables below in Render's private environment settings. Generate a random reviewer code of at least 32 characters with a password manager and keep it private. Share it only with the ENAM evaluator outside the public repository.
+3. Enter the environment variables below in Render's private environment settings. Set `FINN_ACCESS_MODE=public_demo`. The previous `reviewer` value is accepted as a compatibility alias; it no longer requires a code.
 4. Initially set `FINN_CORS_ORIGINS` to your intended frontend origin. It must be a JSON array of exact origins with no trailing slash. Update it after Vercel assigns the real URL.
 5. Deploy. Backend health is `https://YOUR-SERVICE.onrender.com/api/v1/health`. Database connectivity must report `ok`. Do not paste environment values or logs containing connection information publicly.
 
@@ -61,7 +61,7 @@ One worker is required for this release's refresh locks, graph/index writes, res
 1. Sign in at https://vercel.com/new, import `err400/Finn`, and choose root directory **`frontend`**, framework **Vite**, Hobby/free.
 2. Set **only public configuration**:
    - `VITE_API_BASE_URL=https://YOUR-SERVICE.onrender.com/api/v1`
-   - `VITE_REVIEWER_MODE=true`
+   - No access-code variable is needed. Remove old `VITE_REVIEWER_MODE`; it is ignored by this version.
 3. Build `npm run build`, output `dist`, install `npm ci`. These defaults and security headers are in `frontend/vercel.json`.
 4. Deploy. Copy the actual production URL into Render's `FINN_CORS_ORIGINS`, e.g. `["https://your-finn.vercel.app"]`; redeploy/restart the backend after environment changes.
 5. Vite variables are embedded at build time. Redeploy Vercel after changing them. Do not put `HYDE_*`, passwords, bearer codes, or storage keys into Vercel.
@@ -73,8 +73,8 @@ The CSP permits API connections to `https://*.onrender.com`; tighten to your exa
 | Variable | Where | Required/default | Purpose |
 |---|---|---|---|
 | `FINN_DATABASE_URL` | Backend, secret | SQLite locally; Postgres session-pooler URI hosted | Persistent relational store |
-| `FINN_ACCESS_MODE` | Backend | `local` / hosted `reviewer` | Loopback guard or private bearer access |
-| `FINN_REVIEWER_TOKEN` | Backend, secret | Required in reviewer mode, ≥32 chars | Runtime access code; never a frontend variable |
+| `FINN_ACCESS_MODE` | Backend | `local` / hosted `public_demo` | Loopback guard or public synthetic demo |
+| `FINN_REVIEWER_TOKEN` | Deprecated | Not used; remove from dashboard | No access code is required |
 | `FINN_CORS_ORIGINS` | Backend | JSON list of exact frontend origins | Browser allowlist; not authentication |
 | `FINN_STORAGE_BACKEND` | Backend | `local` / hosted `supabase` | Source-blob adapter |
 | `FINN_STORAGE_URL` | Backend | Supabase project HTTPS URL in cloud mode | Private Storage API origin |
@@ -89,20 +89,20 @@ The CSP permits API connections to `https://*.onrender.com`; tighten to your exa
 | `FINN_AUTO_REFRESH_ENABLED` | Backend | true | Periodic source checks while API is awake |
 | `FINN_SOURCE_REFRESH_SECONDS` | Backend | 300 locally; 900 hosted, minimum 300 | Source polling interval |
 | `FINN_BOOTSTRAP_ENABLED` | Backend | false; optional fresh-source recovery | Re-ingest reviewed portfolio data, not fabricated fixtures |
-| `FINN_EPHEMERAL_STORAGE` | Backend | **false** | Fails closed if reviewer mode lacks durable adapters; true is only an explicitly temporary test alternative |
+| `FINN_EPHEMERAL_STORAGE` | Backend | **false** | Fails closed if public demo lacks durable adapters; true is only an explicitly temporary test alternative |
 | `FINN_PRIMARY_CATALOG_PATH` | Backend | Optional path | Operator-reviewed alternative catalog |
 | `FINN_REVIEWED_PRIMARY_HOSTS` | Backend | Optional JSON list | Additional reviewed exact PDF hosts |
 | `PYTHON_VERSION` | Render | `3.12.12` | Build runtime |
 | `PORT` | Render | Platform supplied | Bind public ASGI server |
 | `VITE_API_BASE_URL` | Vercel, public | Required hosted API URL including `/api/v1` | Browser API base |
-| `VITE_REVIEWER_MODE` | Vercel, public | true hosted / false locally | Access-code gate; the server independently enforces access |
+| `VITE_REVIEWER_MODE` | Deprecated | Not used; remove | No login screen |
 | `FINN_TEST_POSTGRES_URL` | Test runner only | Optional disposable DB named `finn_audit` | Destructive isolated integration test; never production |
 
 Settings read process environment directly; `.env` is optional and ignored by Git. Health reveals model/configuration status, never keys. Backend environment changes need restart. Database and service-role credentials grant significant privileges; rotate them if exposed.
 
 ## 4. Verify the actual deployment
 
-Run from `backend`, with the reviewer token already exported **privately in your terminal**:
+Run from `backend`; no access code is needed:
 
 ```sh
 .venv/bin/python scripts/verify_deployment.py \
@@ -111,9 +111,9 @@ Run from `backend`, with the reviewer token already exported **privately in your
   --research --report ../docs/verification/deployed-smoke.json
 ```
 
-This checks real frontend delivery, backend readiness, authenticated API access, CORS/preflight including Authorization, portfolio counts, archive coverage, event-to-person integration, and one primary-grounded research request. `--research` may incur inference cost. The report contains no access code. Do not label local smoke reports as deployed verification.
+This checks real frontend delivery, backend readiness, public-demo API access, CORS/preflight, portfolio counts, archive coverage, event-to-person integration, and one primary-grounded research request. `--research` may incur inference cost. The report contains no access code. Do not label local smoke reports as deployed verification.
 
-Manually check at 390px and desktop widths: login/lock, digest/filter/routine expansion, citation links and drawer focus, alerts save/pause, research success/failure, keyboard navigation, and source freshness. Then **restart Render** and confirm the same rule IDs, document counts, and citations still exist. Verify that anonymous Supabase table and bucket requests fail. This final cloud persistence/access check is pending account provisioning.
+Manually check at 390px and desktop widths: direct app access, digest/filter/routine expansion, citation links and drawer focus, alerts save/pause, research success/failure, keyboard navigation, and source freshness. Then **restart Render** and confirm the same rule IDs, document counts, and citations still exist. Verify that anonymous Supabase table and bucket requests fail. This final cloud persistence/access check is pending account provisioning.
 
 ## Maintenance and recovery
 

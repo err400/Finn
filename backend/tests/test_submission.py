@@ -16,29 +16,27 @@ from app.models.entities import Company
 from test_intelligence import primary
 
 
-def test_reviewer_configuration_fails_closed():
-    with pytest.raises(ValueError):Settings(_env_file=None,access_mode='reviewer')
-    with pytest.raises(ValueError):Settings(_env_file=None,access_mode='reviewer',reviewer_token='x'*32)
-    cfg=Settings(_env_file=None,access_mode='reviewer',reviewer_token='x'*32,ephemeral_storage=True)
-    assert 'x'*32 not in repr(cfg)
+def test_public_demo_requires_durable_configuration_and_accepts_legacy_mode():
+    with pytest.raises(ValueError):Settings(_env_file=None,access_mode='public_demo')
+    cfg=Settings(_env_file=None,access_mode='reviewer',ephemeral_storage=True)
+    assert cfg.access_mode=='public_demo' and cfg.reviewer_token is None
 
 
-def test_remote_reviewer_cors_auth_and_raw_file_restriction(client,monkeypatch):
+def test_public_demo_opens_without_code_but_protects_operator_and_raw_sources(client,monkeypatch):
     c,_=client
-    cfg=Settings(_env_file=None,access_mode='reviewer',reviewer_token='x'*32,ephemeral_storage=True)
+    cfg=Settings(_env_file=None,access_mode='public_demo',ephemeral_storage=True)
     monkeypatch.setattr(access,'get_settings',lambda:cfg)
     import app.api.ingestion as ingestion
     monkeypatch.setattr(ingestion,'get_settings',lambda:cfg)
     access._windows.clear()
-    assert c.get('/api/v1/network').status_code==401
-    assert c.get('/api/v1/portfolio').status_code==401
-    assert c.get('/api/v1/health').status_code==200
-    headers={'Authorization':'Bearer '+'x'*32}
-    assert c.get('/api/v1/portfolio/overview',headers=headers).status_code==200
-    assert c.get('/api/v1/network',headers={**headers,'Origin':'https://evil.example'}).status_code==403
-    assert c.get('/api/v1/data/documents/1/file',headers=headers).status_code==403
-    assert c.get('/api/v1/portfolio',headers={'Authorization':'Bearer wrong'}).status_code==401
-    assert c.get('/api/v1/portfolio',headers=headers).headers['cache-control']=='no-store'
+    assert c.get('/api/v1/network').status_code==200
+    assert c.get('/api/v1/portfolio').status_code==200
+    assert c.get('/api/v1/portfolio/overview').status_code==200
+    assert c.get('/api/v1/network',headers={'Origin':'https://evil.example'}).status_code==403
+    assert c.get('/api/v1/data/documents/1/file').status_code==403
+    assert c.get('/api/v1/data/documents/1/pages/1').status_code==403
+    assert c.post('/api/v1/data/refresh',json={'ticker':'RELIANCE','dataset':'filings'}).status_code==503
+    assert c.get('/api/v1/portfolio').headers['cache-control']=='no-store'
     access._windows.clear()
 
 

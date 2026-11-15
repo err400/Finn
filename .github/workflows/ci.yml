@@ -46,5 +46,4 @@ jobs:
       - run: npm run build
         working-directory: frontend
         env:
-          VITE_REVIEWER_MODE: 'true'
           VITE_API_BASE_URL: https://example.onrender.com/api/v1

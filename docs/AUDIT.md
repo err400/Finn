@@ -1,5 +1,7 @@
 # Source audit and release verification · 16 November 2026
 
+**Update:** The user subsequently requested a public no-login demo. The reviewer gate described in the original audit below was removed; budgets, private storage, raw-source restrictions and operator-ingestion token remain. The legacy reviewer mode is a compatibility alias to public_demo.
+
 The actual API/services/providers/models/frontend and regression tests were inspected. This is an engineering prototype audit, not independent financial or penetration-test certification.
 
 ## Findings and fixes, ordered by severity

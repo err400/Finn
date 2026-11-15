@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     reviewed_primary_hosts: list[str] = []
     data_dir: Path = Path(__file__).resolve().parents[2] / "data"
     ingest_token: SecretStr | None = None
-    access_mode: Literal['local', 'reviewer'] = 'local'
+    access_mode: Literal['local', 'public_demo'] = 'local'
     reviewer_token: SecretStr | None = None
     bootstrap_enabled: bool = False
     ephemeral_storage: bool = False
@@ -24,13 +24,18 @@ class Settings(BaseSettings):
     storage_bucket: str = 'finn-private'
     storage_key: SecretStr | None = None
 
+    @field_validator('access_mode', mode='before')
+    @classmethod
+    def migrate_demo_mode(cls, value):
+        # User-requested migration: old hosted reviewer configuration now opens
+        # the same synthetic demo without requiring another dashboard change.
+        return 'public_demo' if value == 'reviewer' else value
+
     @model_validator(mode='after')
     def deployment_boundary(self):
-        if self.access_mode == 'reviewer':
-            if not self.reviewer_token or len(self.reviewer_token.get_secret_value()) < 32:
-                raise ValueError('Reviewer mode requires FINN_REVIEWER_TOKEN with at least 32 characters')
+        if self.access_mode == 'public_demo':
             if not self.cors_origins or any(o == '*' for o in self.cors_origins):
-                raise ValueError('Reviewer mode requires explicit frontend CORS origins')
+                raise ValueError('Public demo requires explicit frontend CORS origins')
         if not self.database_url.startswith(('sqlite:', 'postgresql+psycopg:')):
             raise ValueError('Use SQLite locally or postgresql+psycopg for deployment')
         if self.storage_backend == 'supabase':
@@ -41,8 +46,8 @@ class Settings(BaseSettings):
                 raise ValueError('Use the HTTPS Supabase project URL without a path or credentials')
             if not re.fullmatch(r'[a-z0-9-]{1,63}', self.storage_bucket) or not self.storage_key:
                 raise ValueError('Private storage requires a bucket name and server-side storage key')
-        if self.access_mode == 'reviewer' and (not self.database_url.startswith('postgresql+psycopg:') or self.storage_backend != 'supabase') and not self.ephemeral_storage:
-            raise ValueError('Durable reviewer deployment requires Postgres and private object storage')
+        if self.access_mode == 'public_demo' and (not self.database_url.startswith('postgresql+psycopg:') or self.storage_backend != 'supabase') and not self.ephemeral_storage:
+            raise ValueError('Durable public demo deployment requires Postgres and private object storage')
         return self
     @field_validator("llm_base_url")
     @classmethod

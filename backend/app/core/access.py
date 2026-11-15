@@ -1,5 +1,4 @@
-"""Single-reviewer gate, not production identity or multi-tenant authentication."""
-import hmac
+"""Public synthetic demo budgets, with a loopback-only local mode."""
 import ipaddress
 import threading
 import time
@@ -17,7 +16,7 @@ def check_budget(key: str, limit: int, seconds: int):
         while window and window[0] <= now - seconds:
             window.popleft()
         if len(window) >= limit:
-            raise HTTPException(429, 'Reviewer demo request budget reached; retry later.', headers={'Retry-After': str(seconds)})
+            raise HTTPException(429, 'Public demo request budget reached; retry later.', headers={'Retry-After': str(seconds)})
         window.append(now)
 
 def workspace_access(request: Request):
@@ -33,11 +32,7 @@ def workspace_access(request: Request):
         if not local:
             raise HTTPException(403, 'Source datasets are restricted to local personal use; public redistribution is not enabled')
         return
-    authorization = request.headers.get('authorization', '')
-    expected = 'Bearer ' + settings.reviewer_token.get_secret_value()
-    if not hmac.compare_digest(authorization.encode(), expected.encode()):
-        raise HTTPException(401, 'Enter the private reviewer access code', headers={'WWW-Authenticate': 'Bearer'})
-    # Shared budgets are deliberate: one process, one synthetic reviewer workspace.
+    # Shared budgets are deliberate: one process, one synthetic public demo workspace.
     check_budget('all', 600, 60)
     if request.method != 'GET':
         check_budget('writes', 60, 3600)
