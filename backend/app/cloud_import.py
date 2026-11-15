@@ -1,6 +1,7 @@
 """Safe operator import diagnostics. No raw exceptions, URLs, or credentials on stdout."""
 import argparse
 import json
+import time
 from pathlib import Path
 
 MESSAGES = {
@@ -54,9 +55,13 @@ def check_private_bucket(settings, client):
     key=settings.storage_key.get_secret_value()
     headers={'apikey':key}
     if not key.startswith('sb_secret_'):headers['Authorization']='Bearer '+key
-    try:
-        response=client.get(settings.storage_url.rstrip('/')+'/storage/v1/bucket/'+settings.storage_bucket,headers=headers)
-    except httpx.HTTPError as exc:raise ImportFailure('storage_network') from exc
+    for attempt in range(3):
+        try:
+            response=client.get(settings.storage_url.rstrip('/')+'/storage/v1/bucket/'+settings.storage_bucket,headers=headers)
+            break
+        except httpx.HTTPError as exc:
+            if attempt==2:raise ImportFailure('storage_network') from exc
+            time.sleep(1)
     if response.status_code in {401,403}:raise ImportFailure('storage_auth')
     if response.status_code==404:raise ImportFailure('bucket_missing')
     if response.status_code!=200:raise ImportFailure('storage_unavailable')
@@ -85,7 +90,7 @@ def run_import(source_db,source_blobs,check_only=False):
     except ImportFailure:raise
     except Exception as exc:raise ImportFailure(database_error_code(exc)) from exc
     emit(stage='database',status='passed')
-    with httpx.Client(timeout=45,follow_redirects=False) as client:
+    with httpx.Client(timeout=httpx.Timeout(45,connect=10),follow_redirects=False) as client:
         emit(stage='storage',status='checking')
         check_private_bucket(settings,client)
         emit(stage='storage',status='passed')

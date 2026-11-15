@@ -197,3 +197,17 @@ def test_import_helper_encodes_separately_entered_password_and_prints_only_safe_
     output=capsys.readouterr().out
     assert 'database_auth' in output and password not in output and 'synthetic-service-key' not in output
     assert 'upstream invented secret' not in output
+
+
+def test_storage_import_preflight_retries_transient_connection_failure(monkeypatch):
+    from app.cloud_import import check_private_bucket
+    import app.cloud_import as importer
+    monkeypatch.setattr(importer.time,'sleep',lambda _:None)
+    settings=SimpleNamespace(storage_url='https://test.supabase.co',storage_bucket='finn-private',storage_key=SimpleNamespace(get_secret_value=lambda:'synthetic-service-key'))
+    calls=[]
+    def handler(request):
+        calls.append(request)
+        if len(calls)==1:raise httpx.ConnectError('Synthetic transient transport failure',request=request)
+        return httpx.Response(200,json={'public':False})
+    with httpx.Client(transport=httpx.MockTransport(handler)) as client:check_private_bucket(settings,client)
+    assert len(calls)==2
