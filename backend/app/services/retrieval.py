@@ -66,11 +66,15 @@ def retrieve(db,company_id,question,workflow,limit=10):
         AND d.kind IN ('annual_report','earnings_transcript','quarterly_results')
         ORDER BY score, c.id LIMIT 100'''
     rows=db.execute(text(sql),{'query':query,'company':company_id}).all()
+    matches={chunk.id:(chunk,doc,source) for chunk,doc,source in db.execute(
+        select(ResearchChunk,DocumentAsset,RawSnapshot)
+        .join(DocumentAsset,ResearchChunk.document_id==DocumentAsset.id)
+        .join(RawSnapshot,DocumentAsset.snapshot_id==RawSnapshot.id)
+        .where(ResearchChunk.id.in_([row[0] for row in rows])))}
     hits=[];per_doc={};per_page={}
     for chunk_id,score in rows:
-        chunk=db.get(ResearchChunk,chunk_id);doc=db.get(DocumentAsset,chunk.document_id)
+        chunk,doc,source=matches[chunk_id]
         if per_doc.get(doc.id,0)>=4 or per_page.get((doc.id,chunk.page_number),0)>=2:continue
-        source=db.get(RawSnapshot,doc.snapshot_id)
         hits.append({'chunk_id':chunk.id,'document_id':doc.id,'kind':doc.kind,'title':doc.title,'page':chunk.page_number,'text':chunk.text,
                      'url':source.final_url+f'#page={chunk.page_number}','sha256':doc.sha256,'period_end':str(doc.period_end) if doc.period_end else None,
                      'publication_date':str(doc.published_date) if doc.published_date else None,'retrieval_score':float(-score)})

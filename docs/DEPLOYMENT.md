@@ -10,7 +10,7 @@ The submission no longer depends on Hyde. Set `FINN_LLM_ENABLED=false`, `FINN_SN
 
 ## Current status
 
-Configuration is prepared. No hosted service has been created or verified yet. Account access, the Supabase project, and secret values are required. Never send credentials in chat or commit them to the repository.
+Frontend: https://finn-three-brown.vercel.app. Backend: https://finn-zqtt.onrender.com. Live HTTP checks verified database readiness, imported counts, Vercel CORS, event-to-person integration and evidence-only PULL. See `docs/verification/deployed-smoke.json`. No inference key is required. Never send credentials in chat or commit them to the repository.
 
 The frontend and synthetic demo workspace open without a login. Visitors share demo settings. This is not production investor authentication; never import real private contact/portfolio information. Operator-only ingestion and private source storage remain protected.
 

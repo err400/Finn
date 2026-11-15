@@ -109,9 +109,10 @@ class PushService:
             selected.append(e)
         selected.sort(key=lambda e:(-priority(e.title,category_for(e.title))[0],-e.published_date.toordinal(),-e.id))
         items=[]
+        network=NetworkIntelligence(self.db,self.owner_id,preload=True) if selected else None
         for event in selected[:500]:
             company=companies[event.company_id];insight=self.insight(event)
-            recommendations=NetworkIntelligence(self.db,self.owner_id).recommend(company.ticker,category=insight['category'],event_title=event.title)['recommendations'] if insight['materiality']=='potentially_material' else []
+            recommendations=network.recommend(company.ticker,category=insight['category'],event_title=event.title)['recommendations'] if insight['materiality']=='potentially_material' else []
             origin_query=select(FilingOrigin).where(FilingOrigin.filing_id==event.id)
             if mode!='all':origin_query=origin_query.where(FilingOrigin.mode==mode)
             origins=self.db.scalars(origin_query).all()

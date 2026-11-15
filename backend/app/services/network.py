@@ -1,6 +1,6 @@
 """Explainable, owner-scoped graph recommendations over explicitly synthetic data."""
 import re
-from collections import deque
+from collections import deque,defaultdict
 from datetime import date
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -16,21 +16,38 @@ def person_key(value):
     return re.sub(r'[^a-z0-9]','',re.sub(r'\b(mr|mrs|ms|dr)\.?(?:\s+|$)','',value.casefold()))
 
 class NetworkIntelligence:
-    def __init__(self, db: Session, owner_id: str):self.db,self.owner_id=db,owner_id
+    def __init__(self, db: Session, owner_id: str, *, preload=False):
+        self.db,self.owner_id=db,owner_id
+        self.preloaded=preload
+        if preload:
+            self._people=db.scalars(select(Contact).where(Contact.owner_id==owner_id,Contact.synthetic.is_(True))).all()
+            ids=[p.id for p in self._people]
+            self._companies=db.scalars(select(Company)).all()
+            self._edges=db.scalars(select(RelationshipEdge).where(RelationshipEdge.owner_id==owner_id)).all()
+            self._roles=defaultdict(list)
+            for e,c in db.execute(select(Employment,Company).join(Company,Company.id==Employment.company_id).where(Employment.contact_id.in_(ids))):self._roles[e.contact_id].append((e,c))
+            self._education=defaultdict(list)
+            for e in db.scalars(select(Education).where(Education.contact_id.in_(ids))):self._education[e.contact_id].append(e)
+            self._profiles={p.contact_id:p for p in db.scalars(select(NetworkProfile).where(NetworkProfile.contact_id.in_(ids)))}
+            self._peers=defaultdict(dict)
+            for p in db.scalars(select(CompanyPeer)):self._peers[p.company_id][p.peer_id]=p
+            self._paths=None
 
     def people(self):
+        if self.preloaded:return self._people
         return self.db.scalars(select(Contact).where(Contact.owner_id==self.owner_id,Contact.synthetic.is_(True))).all()
 
     def resolve_company(self, value):
         key=normalize_name(value.strip().upper().removeprefix('NSE:').removesuffix('.NS'))
-        matches=[c for c in self.db.scalars(select(Company)) if key in {normalize_name(c.name),normalize_name(c.ticker)}]
+        matches=[c for c in (self._companies if self.preloaded else self.db.scalars(select(Company))) if key in {normalize_name(c.name),normalize_name(c.ticker)}]
         if len(matches)!=1:raise ValueError('Company name is unavailable or ambiguous; enter an exact registered NSE ticker')
         return matches[0]
 
     def paths(self):
+        if self.preloaded and self._paths is not None:return self._paths
         people={p.id:p for p in self.people()}
         adjacency={}
-        for e in self.db.scalars(select(RelationshipEdge).where(RelationshipEdge.owner_id==self.owner_id)):
+        for e in (self._edges if self.preloaded else self.db.scalars(select(RelationshipEdge).where(RelationshipEdge.owner_id==self.owner_id))):
             if e.target_id not in people or (e.source_key!='investor' and e.source_key not in {str(i) for i in people}):continue
             adjacency.setdefault(e.source_key,[]).append(e)
         found={};queue=deque([('investor',[])])
@@ -40,14 +57,15 @@ class NetworkIntelligence:
             for edge in adjacency.get(source,[]):
                 if edge.target_id in found:continue
                 route=path+[edge];found[edge.target_id]=route;queue.append((str(edge.target_id),route))
+        if self.preloaded:self._paths=found
         return found
 
     def profile(self,contact_id):
         contact=next((p for p in self.people() if p.id==contact_id),None)
         if not contact:return None
-        extra=self.db.get(NetworkProfile,contact.id)
-        roles=self.db.execute(select(Employment,Company).join(Company,Employment.company_id==Company.id).where(Employment.contact_id==contact.id)).all()
-        education=self.db.scalars(select(Education).where(Education.contact_id==contact.id)).all()
+        extra=self._profiles.get(contact.id) if self.preloaded else self.db.get(NetworkProfile,contact.id)
+        roles=self._roles[contact.id] if self.preloaded else self.db.execute(select(Employment,Company).join(Company,Employment.company_id==Company.id).where(Employment.contact_id==contact.id)).all()
+        education=self._education[contact.id] if self.preloaded else self.db.scalars(select(Education).where(Education.contact_id==contact.id)).all()
         route=self.paths().get(contact.id,[])
         return {'id':contact.id,'name':contact.name,'expertise':contact.expertise,'synthetic':True,'provenance':contact.provenance,
                 'bio':extra.bio if extra else None,'aliases':extra.aliases if extra else [],'last_contact_date':str(extra.last_contact_date) if extra and extra.last_contact_date else None,
@@ -68,7 +86,7 @@ class NetworkIntelligence:
 
     def recommend(self,company_value,*,category=None,event_title='',limit=3):
         company=self.resolve_company(company_value)
-        peers={p.peer_id:p for p in self.db.scalars(select(CompanyPeer).where(CompanyPeer.company_id==company.id))}
+        peers=self._peers[company.id] if self.preloaded else {p.peer_id:p for p in self.db.scalars(select(CompanyPeer).where(CompanyPeer.company_id==company.id))}
         paths=self.paths();recommendations=[]
         tokens=set(re.findall(r'[a-z]{3,}',(event_title+' '+company.sector).casefold()))
         if 'joint operating' in event_title.casefold():tokens.update(['upstream','operating agreements','energy'])
@@ -76,7 +94,7 @@ class NetworkIntelligence:
         for p in self.people():
             route=paths.get(p.id)
             if not route:continue
-            roles=self.db.execute(select(Employment,Company).join(Company,Company.id==Employment.company_id).where(Employment.contact_id==p.id)).all()
+            roles=self._roles[p.id] if self.preloaded else self.db.execute(select(Employment,Company).join(Company,Company.id==Employment.company_id).where(Employment.contact_id==p.id)).all()
             direct=[(e,c) for e,c in roles if c.id==company.id]
             peer=[(e,c) for e,c in roles if c.id in peers]
             reasons=[];components={}

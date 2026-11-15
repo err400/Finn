@@ -7,7 +7,7 @@ Hello ENAM team,
 Please find my FINN prototype submission:
 
 - Repository: https://github.com/err400/Finn
-- Live demo: **pending deployment and verification**
+- Live demo: https://finn-three-brown.vercel.app
 - Codex development history: **attach the actual exported ZIP separately**
 
 FINN connects a portfolio digest, deterministic EOD/category alerts, primary-source company research, and contextual professional-network recommendations. Its central interaction is: what happened, why review it, where is the evidence, and who could add context?

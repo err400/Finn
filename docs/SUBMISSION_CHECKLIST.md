@@ -16,15 +16,15 @@
 ## Publishing and deployment
 
 - [x] Push vetted source to https://github.com/err400/Finn and confirm public visibility (verified 16 November 2026).
-- [ ] Create Supabase **Free** project and **private** `finn-private` bucket.
-- [ ] Privately import local data before first hosted startup, or run reviewed real-source bootstrap.
-- [ ] Render **Free** backend, one worker, Postgres + private Storage secrets only on backend.
-- [ ] Vercel Hobby/free frontend; public API base only; no reviewer gate.
-- [ ] Exact CORS origin + real hosted smoke report, citations, protected routes, and research.
+- [x] Create Supabase **Free** project and **private** `finn-private` bucket; import checks passed.
+- [x] Import completed: 102 source objects and 5,849 rows; live API counts verified.
+- [x] Render backend live: https://finn-zqtt.onrender.com; durable Postgres and private Storage configured.
+- [x] Vercel frontend live: https://finn-three-brown.vercel.app; real API configured, no reviewer gate.
+- [x] Exact Vercel CORS origin, live smoke report, event citations/network and evidence-only research verified.
 - [ ] Restart Render and confirm saved rule IDs/source counts persist in Supabase.
 - [ ] Confirm anonymous Supabase database/bucket access denied; no service keys in frontend assets.
-- [ ] Configure inference spend cap or leave synthesis disabled with evidence-only mode.
-- [ ] Record actual live URL and demo walkthrough for evaluator.
+- [x] Inference disabled; evidence-only mode, fixed source snapshot.
+- [x] Live URL and demo walkthrough recorded in README and covering-note draft.
 
 ## Email deliverables
 

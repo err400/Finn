@@ -263,3 +263,33 @@ def test_malformed_password_cannot_leak_into_dns_hostname():
         Settings(_env_file=None,database_url='postgresql://postgres.synthetic:fake@4secret@aws-0-region.pooler.supabase.com:5432/postgres')
     assert 'FINN_DATABASE_PASSWORD separately' in str(caught.value)
     assert '4secret' not in str(caught.value)
+
+
+def test_portfolio_overview_uses_bounded_database_round_trips(client):
+    from sqlalchemy import event
+    c,factory=client;engine=factory.kw['bind'];queries=[]
+    def record(*args):queries.append(args[2])
+    event.listen(engine,'before_cursor_execute',record)
+    try:
+        response=c.get('/api/v1/portfolio/overview')
+        assert response.status_code==200 and response.json()['summary']['companies']==18
+        assert len(queries)<=7
+    finally:event.remove(engine,'before_cursor_execute',record)
+
+
+def test_prefetched_network_preserves_ranking_and_avoids_per_person_queries(client):
+    from sqlalchemy import event
+    from app.services.network import NetworkIntelligence
+    from app.db.seed import DEMO_OWNER
+    _,factory=client
+    with factory() as db:
+        baseline=NetworkIntelligence(db,DEMO_OWNER).recommend('RELIANCE',event_title='joint operating agreement')
+        service=NetworkIntelligence(db,DEMO_OWNER,preload=True)
+        queries=[];engine=factory.kw['bind']
+        def record(*args):queries.append(args[2])
+        event.listen(engine,'before_cursor_execute',record)
+        try:
+            assert service.recommend('RELIANCE',event_title='joint operating agreement')==baseline
+            assert NetworkIntelligence(db,'another-owner',preload=True).recommend('RELIANCE')['recommendations']==[]
+            assert len(queries)<=7  # Only the second owner's bounded preload performs SQL.
+        finally:event.remove(engine,'before_cursor_execute',record)

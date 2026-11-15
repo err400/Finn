@@ -60,3 +60,8 @@ The actual API/services/providers/models/frontend and regression tests were insp
 ## Not yet verified / submission blockers
 
 No hosted frontend/backend URL exists yet. User is completing dashboard account setup. Actual cloud SQL/Storage credentials, bucket policies, migration, CORS, deployment readiness and persistence after a Render restart still need live checks. Actual chat export and final email submission remain user actions. The detailed source inspection and passing local tests do not turn the prototype into production financial infrastructure.
+
+
+## Hosted verification and latency update
+
+The deployed frontend is https://finn-three-brown.vercel.app and the backend is https://finn-zqtt.onrender.com. Live checks verified 18 companies, 1,872 EOD rows, 32 documents, 22 announcements, Vercel CORS, contextual people and evidence-only research (8 primary passages). The live bundle uses the actual backend URL and has no access-code screen. Hyde is disabled as requested. Cloud latency exposed repeated per-company/contact/chunk reads; the overview now batches six SQL reads, the digest reuses an owner-scoped prefetched network, and retrieval loads candidate citations in bulk. Regression tests assert bounded query counts and unchanged ranking/owner isolation. Current local suite: 68 passed, 1 optional Postgres test skipped; frontend: 12 passed and production build passed. Initial PostgreSQL integration had previously passed locally and in GitHub CI. Full browser/mobile paint checks remain unverified.

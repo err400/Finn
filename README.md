@@ -2,7 +2,7 @@
 
 FINN connects portfolio events, primary-source company research, and the people who could help an investor understand them. Built for the **ENAM Founding AI Engineer Build Challenge** using React, TypeScript, Tailwind, FastAPI, and SQLAlchemy.
 
-**Status:** functional local prototype; Vercel + Render Free + Supabase deployment configuration is prepared. Hosted URLs are not yet provisioned or verified. The public source repository contains no downloaded reports, investor database, or inference credentials.
+**Status:** functional local prototype; Vercel + Render Free + Supabase deployment configuration is prepared. Live frontend: https://finn-three-brown.vercel.app · API health: https://finn-zqtt.onrender.com/api/v1/health. Hosted API/CORS, imported data, event-to-person and evidence-only research checks passed; browser/mobile visual verification remains limited. The public source repository contains no downloaded reports, investor database, or inference credentials.
 
 ## Submission snapshot
 

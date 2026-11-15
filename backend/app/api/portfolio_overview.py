@@ -1,5 +1,6 @@
 """Read-only product view over existing verified records; never fetches or invents data."""
 from datetime import datetime,timedelta,timezone
+from collections import defaultdict
 from decimal import Decimal
 from fastapi import APIRouter,Depends
 from sqlalchemy import select,func
@@ -17,16 +18,25 @@ router=APIRouter(prefix='/api/v1/portfolio',tags=['Portfolio'],dependencies=[Dep
 def overview(db:Session=Depends(get_db)):
     now=datetime.now(timezone.utc);today=now.astimezone(IST).date()
     companies=db.scalars(select(Company).join(PortfolioHolding).where(PortfolioHolding.owner_id==DEMO_OWNER).order_by(Company.ticker)).all()
+    ids=[c.id for c in companies]
+    prices=defaultdict(list)
+    for row in db.scalars(select(EodPrice).where(EodPrice.company_id.in_(ids)).order_by(EodPrice.trading_date.desc(),EodPrice.updated_at.desc())):
+        prices[row.company_id].append(row)
+    sources={r.id:r for r in db.scalars(select(RawSnapshot).where(RawSnapshot.id.in_({rows[0].snapshot_id for rows in prices.values() if rows})))}
+    latest_runs={}
+    for run in db.scalars(select(IngestionRun).where(IngestionRun.ticker.in_([c.ticker for c in companies]),IngestionRun.dataset=='prices').order_by(IngestionRun.id.desc())):
+        latest_runs.setdefault(run.ticker,run)
+    document_counts=dict(db.execute(select(DocumentAsset.company_id,func.count()).where(DocumentAsset.company_id.in_(ids),DocumentAsset.kind.in_(['annual_report','earnings_transcript','quarterly_results']),DocumentAsset.extraction_status.in_(['extracted','partial'])).group_by(DocumentAsset.company_id)).all())
     items=[]
     for company in companies:
-        rows=db.scalars(select(EodPrice).where(EodPrice.company_id==company.id).order_by(EodPrice.trading_date.desc(),EodPrice.updated_at.desc())).all()
+        rows=prices[company.id]
         # Never compare prices from different providers or duplicate dates.
         latest=rows[0] if rows else None
         previous=next((r for r in rows[1:] if r.provider==latest.provider and r.trading_date<latest.trading_date),None) if latest else None
-        run=db.scalar(select(IngestionRun).where(IngestionRun.ticker==company.ticker,IngestionRun.dataset=='prices').order_by(IngestionRun.id.desc()).limit(1))
+        run=latest_runs.get(company.ticker)
         price=None;state='missing';note='No verified EOD prices stored.'
         if latest:
-            source=db.get(RawSnapshot,latest.snapshot_id)
+            source=sources[latest.snapshot_id]
             comparable=previous and 0<(latest.trading_date-previous.trading_date).days<=7 and Decimal(previous.close)>0
             change=format(((Decimal(latest.close)/Decimal(previous.close)-1)*100).quantize(Decimal('0.01')),'f') if comparable else None
             price={'close':latest.close,'currency':latest.currency,'volume':latest.volume,'trading_date':str(latest.trading_date),'change_percent':change,
@@ -39,7 +49,7 @@ def overview(db:Session=Depends(get_db)):
                 state='stale';note='Price source has not been refreshed within the last 24 hours.'
             if run and run.status in {'failed','stale','partial'}:
                 state='stale';note='Latest refresh was '+run.status+'; showing previously stored observations.'
-        docs=db.scalar(select(func.count()).select_from(DocumentAsset).where(DocumentAsset.company_id==company.id,DocumentAsset.kind.in_(['annual_report','earnings_transcript','quarterly_results']),DocumentAsset.extraction_status.in_(['extracted','partial'])))
+        docs=document_counts.get(company.id,0)
         items.append({'ticker':company.ticker,'name':company.name,'sector':company.sector,'exchange':company.exchange,'research_demo':company.research_demo,
                       'price':price,'source_state':state,'source_note':note,'primary_document_count':docs})
     replay=db.scalars(select(FilingEvent).where(FilingEvent.company_id.in_([c.id for c in companies]),FilingEvent.id.in_(select(FilingOrigin.filing_id).where(FilingOrigin.mode=='replay')))).all()

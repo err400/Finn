@@ -20,7 +20,7 @@ class RagResearchService:
 
     def research(self,ticker,question,workflow='snapshot'):
         ticker,company=IngestionService(self.db,get_settings().data_dir).resolve(ticker)
-        network=NetworkIntelligence(self.db,self.owner_id).recommend(ticker)['recommendations'] if company else []
+        network=NetworkIntelligence(self.db,self.owner_id,preload=True).recommend(ticker)['recommendations'] if company else []
         evidence,docs=retrieve(self.db,company.id,question,workflow) if company else ([],[])
         fingerprints=sorted(d.sha256 for d in docs)
         key=hashlib.sha256(json.dumps([self.owner_id,ticker,question.strip().casefold(),workflow,fingerprints,self.model.identity,'rag-v4']).encode()).hexdigest()
