@@ -1,5 +1,9 @@
 # Deploy FINN: Vercel + Render Free + durable Supabase
 
+## Separate database password (recommended)
+
+In Render, paste the original Supabase Session-pooler URI into `FINN_DATABASE_URL`, keeping `[YOUR-PASSWORD]` unchanged. Add `FINN_DATABASE_PASSWORD` with the raw database password; do not percent-encode it. The backend inserts and encodes it safely without exposing the value. An already encoded complete URI still works when the separate variable is absent. Recopy a malformed URI rather than manually editing its hostname.
+
 ## Fixed submission configuration
 
 The submission no longer depends on Hyde. Set `FINN_LLM_ENABLED=false`, `FINN_SNAPSHOT_MODE=true`, `FINN_AUTO_REFRESH_ENABLED=false`, and `FINN_BOOTSTRAP_ENABLED=false`. Omit all `HYDE_*` and `FINN_LLM_API_KEY` variables. The user has successfully imported 102 objects and 5,849 rows into Supabase; do not rerun the empty-target import. Research remains primary evidence/retrieval/calculations only and is honestly labeled evidence-only, without model synthesis. Snapshot mode disables automatic and UI-triggered source downloads; historical digest and rule evaluation remain interactive.

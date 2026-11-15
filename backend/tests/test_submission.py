@@ -247,3 +247,19 @@ def test_database_placeholder_rejected_without_printing_connection_details():
         Settings(_env_file=None,database_url='postgresql://postgres.test:[YOUR-PASSWORD]@private-host.supabase.co:5432/postgres')
     assert 'Replace the database password placeholder' in str(caught.value)
     assert 'private-host' not in str(caught.value)
+
+
+def test_render_separate_database_password_is_encoded_without_ambiguity():
+    from sqlalchemy.engine import make_url
+    password='Synthetic@4number#?/:%'
+    cfg=Settings(_env_file=None,database_password=password,database_url='postgresql://postgres.synthetic:[YOUR-PASSWORD]@aws-0-region.pooler.supabase.com:5432/postgres')
+    parsed=make_url(cfg.database_url)
+    assert parsed.password==password and parsed.host=='aws-0-region.pooler.supabase.com'
+    assert password not in repr(cfg) and parsed.query['sslmode']=='require'
+
+
+def test_malformed_password_cannot_leak_into_dns_hostname():
+    with pytest.raises(ValueError) as caught:
+        Settings(_env_file=None,database_url='postgresql://postgres.synthetic:fake@4secret@aws-0-region.pooler.supabase.com:5432/postgres')
+    assert 'FINN_DATABASE_PASSWORD separately' in str(caught.value)
+    assert '4secret' not in str(caught.value)

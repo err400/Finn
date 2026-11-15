@@ -1,7 +1,7 @@
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal
-from pydantic import SecretStr, Field, AliasChoices, field_validator, model_validator
+from pydantic import SecretStr, Field, AliasChoices, field_validator, model_validator, ValidationInfo
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
@@ -25,6 +25,7 @@ class Settings(BaseSettings):
     storage_url: str = ''
     storage_bucket: str = 'finn-private'
     storage_key: SecretStr | None = None
+    database_password: SecretStr | None = None
 
     @field_validator('access_mode', mode='before')
     @classmethod
@@ -35,7 +36,7 @@ class Settings(BaseSettings):
 
     @field_validator('database_url', mode='before')
     @classmethod
-    def normalize_database_uri(cls, value):
+    def normalize_database_uri(cls, value, info: ValidationInfo):
         if not isinstance(value, str):
             raise ValueError('Database connection must be a URI')
         value = value.strip()
@@ -49,10 +50,15 @@ class Settings(BaseSettings):
             from sqlalchemy.engine import make_url
             try:
                 url = make_url(value)
-                if not url.host or not url.username:
+                if not url.host or not url.username or '@' in url.host:
                     raise ValueError()
             except Exception:
-                raise ValueError('Invalid Postgres URI; copy the Session-pooler URI from Supabase Connect') from None
+                raise ValueError('Invalid database URI. Recopy the Session-pooler URI with its password placeholder and set FINN_DATABASE_PASSWORD separately.') from None
+            separate_password = info.data.get('database_password')
+            if separate_password is not None:
+                if not separate_password.get_secret_value():
+                    raise ValueError('FINN_DATABASE_PASSWORD cannot be empty')
+                url = url.set(password=separate_password.get_secret_value())
             if url.password and 'YOUR-PASSWORD' in url.password.upper():
                 raise ValueError('Replace the database password placeholder privately in Render before deploying')
             if url.host.endswith('.supabase.co') or url.host.endswith('.pooler.supabase.com'):
