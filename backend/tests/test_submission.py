@@ -138,3 +138,62 @@ def test_concurrent_research_is_bounded_without_duplicate_model_requests(client)
         r=c.post('/api/v1/research',json={'ticker':'TCS','question':'What is the business?'})
         assert r.status_code==429 and r.headers['retry-after']=='15'
     finally:research_slot.release()
+
+
+@pytest.mark.parametrize('status,body,expected',[
+    (401,{'error':'secret error body'},'storage_auth'),
+    (403,{'error':'secret error body'},'storage_auth'),
+    (404,{},'bucket_missing'),
+    (200,{'public':True},'bucket_public'),
+])
+def test_import_bucket_diagnostics_do_not_reveal_upstream_errors(status,body,expected):
+    from app.cloud_import import check_private_bucket,ImportFailure,MESSAGES
+    settings=SimpleNamespace(storage_url='https://test.supabase.co',storage_bucket='finn-private',storage_key=SimpleNamespace(get_secret_value=lambda:'synthetic-test-key'))
+    with httpx.Client(transport=httpx.MockTransport(lambda _:httpx.Response(status,json=body))) as client:
+        with pytest.raises(ImportFailure) as caught:check_private_bucket(settings,client)
+    assert caught.value.code==expected
+    assert 'secret error body' not in MESSAGES[expected] and 'synthetic-test-key' not in MESSAGES[expected]
+
+
+def test_import_database_error_classification_and_new_secret_key_transport():
+    from app.cloud_import import database_error_code,check_private_bucket
+    assert database_error_code(SimpleNamespace(orig=SimpleNamespace(sqlstate='28P01')))=='database_auth'
+    assert database_error_code(Exception('Tenant or user not found private details'))=='database_tenant'
+    assert database_error_code(Exception('connection timed out private host'))=='database_network'
+    assert database_error_code(Exception('certificate verify failed private value'))=='database_tls'
+    settings=SimpleNamespace(storage_url='https://test.supabase.co',storage_bucket='finn-private',storage_key=SimpleNamespace(get_secret_value=lambda:'sb_secret_synthetic_test'))
+    body=b'Synthetic blob';sha=hashlib.sha256(body).hexdigest()
+    def handler(request):
+        assert request.headers['apikey']=='sb_secret_synthetic_test'
+        assert 'authorization' not in request.headers
+        return httpx.Response(200,json={'public':False})
+    with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+        check_private_bucket(settings,client)
+        SupabaseBlobStore(settings,client).put(sha,body)
+
+
+def test_import_helper_encodes_separately_entered_password_and_prints_only_safe_errors(monkeypatch,capsys):
+    import importlib.util
+    import sys
+    from pathlib import Path
+    script=Path(__file__).resolve().parents[2]/'scripts/import_cloud_data.py'
+    spec=importlib.util.spec_from_file_location('finn_import_helper_test',script)
+    helper=importlib.util.module_from_spec(spec);spec.loader.exec_module(helper)
+    uri='postgresql://postgres.test:[YOUR-PASSWORD]@aws-0-region.pooler.supabase.com:5432/postgres'
+    password='Synthetic@password?#% /'
+    prompts=iter([uri,password,'synthetic-service-key'])
+    monkeypatch.setattr(helper.getpass,'getpass',lambda _:next(prompts))
+    monkeypatch.setattr('builtins.input',lambda _:'')
+    monkeypatch.setattr(sys,'argv',['import_cloud_data.py','--check-only'])
+    def worker(command,**kwargs):
+        from sqlalchemy.engine import make_url
+        parsed=make_url(kwargs['env']['FINN_DATABASE_URL'])
+        assert parsed.password==password and parsed.query['sslmode']=='require'
+        assert '--check-only' in command and password not in ' '.join(command)
+        return SimpleNamespace(stdout=iter(['{"status":"failed","code":"database_auth","message":"upstream invented secret must not print"}\n']),wait=lambda:1)
+    monkeypatch.setattr(helper.subprocess,'Popen',worker)
+    with pytest.raises(SystemExit) as caught:helper.main()
+    assert caught.value.code==1
+    output=capsys.readouterr().out
+    assert 'database_auth' in output and password not in output and 'synthetic-service-key' not in output
+    assert 'upstream invented secret' not in output

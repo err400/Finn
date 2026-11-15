@@ -38,7 +38,9 @@ class SupabaseBlobStore:
         own=self.client is None
         client=self.client or httpx.Client(timeout=45, follow_redirects=False)
         try:
-            headers={'Authorization':'Bearer '+self.key,'apikey':self.key,'Content-Type':'application/octet-stream','x-upsert':'true'}
+            headers={'apikey':self.key,'Content-Type':'application/octet-stream','x-upsert':'true'}
+            if not self.key.startswith('sb_secret_'):
+                headers['Authorization']='Bearer '+self.key
             url=self.base+('authenticated/' if method=='GET' else '')+self.bucket+'/'+object_key(sha)
             with client.stream(method,url,headers=headers,content=content) as response:
                 if response.status_code not in {200,201}:
