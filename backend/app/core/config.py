@@ -10,6 +10,8 @@ class Settings(BaseSettings):
     llm_model: str = Field(default="", validation_alias=AliasChoices("HYDE_MODEL", "FINN_LLM_MODEL"))
     llm_base_url: str = Field(default="https://api.openai.com/v1", validation_alias=AliasChoices("HYDE_BASE_URL", "FINN_LLM_BASE_URL"))
     auto_refresh_enabled: bool = True
+    llm_enabled: bool = True
+    snapshot_mode: bool = False
     source_refresh_seconds: int = Field(default=300, ge=300)
     primary_catalog_path: Path | None = None
     reviewed_primary_hosts: list[str] = []

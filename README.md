@@ -4,6 +4,10 @@ FINN connects portfolio events, primary-source company research, and the people 
 
 **Status:** functional local prototype; Vercel + Render Free + Supabase deployment configuration is prepared. Hosted URLs are not yet provisioned or verified. The public source repository contains no downloaded reports, investor database, or inference credentials.
 
+## Submission snapshot
+
+The hosted submission uses the imported Supabase data with `FINN_SNAPSHOT_MODE=true`, `FINN_AUTO_REFRESH_ENABLED=false`, and `FINN_LLM_ENABLED=false`. No Hyde access or inference key is required. Research presents retrieved primary-source passages, citations and supported deterministic calculations; generated synthesis is unavailable. Historical digest, alerts and Network remain interactive. No hardcoded AI answers are substituted. The optional model adapter remains in the source for future configured use.
+
 ## What works
 
 | Layer | Implemented workflow | Boundaries |

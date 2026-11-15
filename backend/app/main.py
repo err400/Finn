@@ -43,7 +43,7 @@ async def lifespan(app: FastAPI):
     task = asyncio.create_task(evaluate_stored_data())
     from app.services.bootstrap import start_bootstrap
     bootstrap_task = asyncio.create_task(start_bootstrap()) if get_settings().bootstrap_enabled else None
-    source_task = asyncio.create_task(refresh_sources()) if get_settings().auto_refresh_enabled else None
+    source_task = asyncio.create_task(refresh_sources()) if get_settings().auto_refresh_enabled and not get_settings().snapshot_mode else None
     try:
         yield
     finally:

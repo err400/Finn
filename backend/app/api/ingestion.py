@@ -143,7 +143,7 @@ def status(db: Session = Depends(get_db)):
     latest = {}
     for run in db.scalars(select(IngestionRun).order_by(IngestionRun.id.desc())):
         latest.setdefault(f"{run.ticker}:{run.dataset}:{run.mode}", run_out(run))
-    return {"usage": "restricted educational review; no public raw-source redistribution", "llm": "configured" if get_settings().llm_model and get_settings().llm_api_key else "not_configured",
+    return {"usage": "restricted educational review; no public raw-source redistribution", "llm": "configured" if get_settings().llm_enabled and get_settings().llm_model and get_settings().llm_api_key else "not_configured",
             "counts": {name: db.scalar(select(func.count()).select_from(model)) for name, model in
                        [("prices", EodPrice), ("documents", DocumentAsset), ("filings", FilingEvent), ("raw_snapshots", RawSnapshot)]},
             "latest_runs": list(latest.values()), "coverage": "RSS is a limited recent window. Primary-source catalog coverage is explicit and incomplete."}

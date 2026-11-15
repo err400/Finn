@@ -29,6 +29,10 @@ services:
       - key: FINN_BOOTSTRAP_ENABLED
         value: false
       - key: FINN_AUTO_REFRESH_ENABLED
+        value: false
+      - key: FINN_SNAPSHOT_MODE
         value: true
+      - key: FINN_LLM_ENABLED
+        value: false
       - key: FINN_SOURCE_REFRESH_SECONDS
         value: 900

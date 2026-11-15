@@ -209,3 +209,23 @@ def test_storage_import_preflight_retries_transient_connection_failure(monkeypat
         return httpx.Response(200,json={'public':False})
     with httpx.Client(transport=httpx.MockTransport(handler)) as client:check_private_bucket(settings,client)
     assert len(calls)==2
+
+
+def test_model_kill_switch_disables_even_present_credentials():
+    from app.providers.llm import OpenAICompatibleModel
+    cfg=Settings(_env_file=None,llm_enabled=False,llm_model='synthetic-model',llm_api_key='synthetic-key')
+    model=OpenAICompatibleModel(cfg)
+    assert not model.configured and model.identity=='disabled'
+    with pytest.raises(ProviderError):model.synthesize('Question','snapshot',[])
+
+
+def test_snapshot_refresh_does_not_fetch_sources(monkeypatch):
+    import asyncio
+    from app.services.source_refresh import SourceRefreshManager
+    import app.core.config as config
+    monkeypatch.setattr(config,'get_settings',lambda:SimpleNamespace(snapshot_mode=True))
+    async def scenario():
+        async def forbidden(_):raise AssertionError('Snapshot must not fetch')
+        manager=SourceRefreshManager(forbidden)
+        assert (await manager.request())['status']=='snapshot' and manager.task is None
+    asyncio.run(scenario())

@@ -21,6 +21,10 @@ class SourceRefreshManager:
             now=datetime.now(timezone.utc)
             return all(c.last_attempt_at and (now-utc(c.last_attempt_at)).total_seconds()<300 for c in entries)
     async def request(self,*,automatic=False):
+        from app.core.config import get_settings
+        if get_settings().snapshot_mode:
+            self.state.update(status='snapshot',message='Fixed submission snapshot. Reloading the view does not fetch new market data.')
+            return self.status()
         if self.task and not self.task.done():return self.status()
         if self.recent_check():
             self.state.update(status='recently_checked',message='Exchange feeds were checked within the last five minutes. Cached source records are being reused; any source errors remain visible.')

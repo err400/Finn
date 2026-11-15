@@ -120,4 +120,4 @@ async def refresh_sources():
 def refresh_status():
     from app.services.source_refresh import source_refresh
     from app.core.config import get_settings
-    return dict(source_refresh.status(),automatic_refresh=get_settings().auto_refresh_enabled,interval_seconds=get_settings().source_refresh_seconds)
+    return dict(source_refresh.status(),snapshot_mode=get_settings().snapshot_mode,automatic_refresh=get_settings().auto_refresh_enabled and not get_settings().snapshot_mode,interval_seconds=get_settings().source_refresh_seconds)

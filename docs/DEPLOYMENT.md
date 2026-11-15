@@ -1,5 +1,9 @@
 # Deploy FINN: Vercel + Render Free + durable Supabase
 
+## Fixed submission configuration
+
+The submission no longer depends on Hyde. Set `FINN_LLM_ENABLED=false`, `FINN_SNAPSHOT_MODE=true`, `FINN_AUTO_REFRESH_ENABLED=false`, and `FINN_BOOTSTRAP_ENABLED=false`. Omit all `HYDE_*` and `FINN_LLM_API_KEY` variables. The user has successfully imported 102 objects and 5,849 rows into Supabase; do not rerun the empty-target import. Research remains primary evidence/retrieval/calculations only and is honestly labeled evidence-only, without model synthesis. Snapshot mode disables automatic and UI-triggered source downloads; historical digest and rule evaluation remain interactive.
+
 ## Current status
 
 Configuration is prepared. No hosted service has been created or verified yet. Account access, the Supabase project, and secret values are required. Never send credentials in chat or commit them to the repository.

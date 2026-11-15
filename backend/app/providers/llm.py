@@ -45,7 +45,7 @@ class OpenAICompatibleModel:
     def __init__(self,settings,client=None):self.settings,self.client=settings,client
     @property
     def configured(self):
-        return bool(self.settings.llm_api_key and self.settings.llm_api_key.get_secret_value() and self.settings.llm_model)
+        return bool(self.settings.llm_enabled and self.settings.llm_api_key and self.settings.llm_api_key.get_secret_value() and self.settings.llm_model)
     @property
     def identity(self):return f'openai-compatible:{urlsplit(self.settings.llm_base_url).hostname}:{self.settings.llm_model}:extractive-v2' if self.configured else 'disabled'
     def synthesize(self,question,workflow,evidence):
